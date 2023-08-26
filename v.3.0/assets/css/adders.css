@@ -1,0 +1,82 @@
+.h_inputs {
+    display: inline;
+    width: 100px;
+}
+
+#submit_btn {
+    background-color: rgb(61, 12, 208);
+    color: white;
+}
+
+.img_column {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.at_configs {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    width: 60%;
+}
+
+.logic_con {
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+
+.gen_btn {
+    cursor: pointer;
+}
+
+/****Truth Table****/
+.tt {
+    display: block;
+    position: relative;
+    width: fit-content;
+}
+
+table {
+    width: fit-content;
+    display: block;
+}
+
+tr {
+    display: block;
+    border: 2px solid rgb(91, 91, 91);
+    width: fit-content;
+    height: fit-content;
+    min-width: 100%;
+}
+
+.title_row {
+    background-color: black;
+    color: white;
+}
+.title_col {
+    background-color: var(--theme-color);
+    color: white;
+    height: 28px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border-right: 3px solid grey;
+}
+
+.title_row td p {
+    padding: 0;
+    margin: 0;
+}
+
+td {
+    display: inline-block;
+    margin: auto;
+    min-width: 60px;
+    width: fit-content;
+    font-weight: bold;
+    align-content: center;
+}

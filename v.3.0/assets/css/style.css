@@ -1,0 +1,367 @@
+html {
+  display: block;
+  margin: 0px;
+}
+
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgb(68, 68, 68);
+  overflow: auto;
+}
+
+.bod {
+  display: block;
+  margin-top: 30px;
+  margin-left: 100px;
+  position: static;
+  min-width: 500px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/****Buttons****/
+select {
+  display: block;
+  margin: auto;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px;
+  font-size: large;
+}
+
+.button_input {
+  background-color: var(--theme-black);
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px 75px 0px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.button_output {
+  background-color: var(--theme-color);
+  /* Green */
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 20px 2px 50px 0px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.button-g-input {
+  background-color: var(--theme-black);
+  /* Green */
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 0px 2px 30px 0px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.clock-btn {
+  background-color: rgb(8, 209, 129);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 25px 2px 2px 0px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.button-g-output {
+  background-color: var(--theme-color);
+  /* Green */
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 20px 2px 50px 0px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.bottom_btns {
+  display: block;
+  margin: auto;
+}
+
+.startBtn {
+  display: block;
+  margin: auto auto 10px auto;
+  align-self: center;
+  position: static;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: var(--theme-color);
+  color: white;
+  border: 0px solid var(--theme-black);
+  box-shadow: #000000 5px 5px 10px 0px;
+  cursor: pointer;
+}
+
+.button-jk-input {
+  background-color: var(--theme-black);
+  /* Green */
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 0px 2px 20px 0px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.clock-jkbtn {
+  background-color: rgb(8, 209, 129);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0px 2px 10px 0px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+select {
+  text-align: center;
+}
+
+option:active {
+  background-color: var(--theme-color);
+}
+
+/*******************Columns****************/
+.column {
+  float: left;
+  width: fit-content;
+  overflow: hidden;
+  margin: 0 0px 0px 0px;
+}
+
+.io-column {
+  float: left;
+  width: fit-content;
+  margin-left: 0px;
+  margin-right: 0px;
+  overflow: hidden;
+}
+
+.io-column-jkInputs {
+  float: left;
+  width: fit-content;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+  display: table;
+  margin: auto;
+  box-shadow: var(--theme-color) 7px 7px 15px 0px;
+  padding: 5%;
+  width: fit-content;
+  min-width: 300;
+  min-width: min-content;
+  background-color: white;
+}
+
+.image {
+  display: block;
+  width: 200px;
+}
+
+#dlatch {
+  display: block;
+  width: 300px;
+}
+
+#dff-image {
+  display: block;
+  width: 200px;
+  margin-top: -20px;
+}
+
+#jkff-image {
+  display: block;
+  width: 200px;
+  margin-top: -20px;
+}
+
+.tt_data {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: -4px;
+  border-right: 1px solid grey;
+  align-content: center;
+  text-align: center;
+  position: relative;
+  float: none;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+}
+
+td p {
+  text-align: center;
+}
+
+td #colA {
+  background-color: transparent;
+}
+
+td #colB {
+  background-color: transparent;
+}
+
+td #colC {
+  background-color: transparent;
+}
+
+#logic_options {
+  display: block;
+  margin: auto;
+  width: fit-content;
+  font-size: larger;
+  text-align: center;
+  font-weight: bold;
+  background-color: #b4acc7;
+  border: 1 solid #b4acc7;
+  border-radius: 10px;
+  box-shadow: #000000 2px 5px 5px;
+  margin-bottom: 20px;
+}
+
+canvas {
+  display: inline;
+  margin-right: 0;
+  width: fit-content;
+  height: fit-content;
+  border: 3px solid var(--theme-color);
+  float: right;
+  position: relative;
+}
+
+.timeGrid {
+  display: flex;
+  align-content: center;
+  overflow-x: scroll;
+  max-width: 450px;
+  padding-bottom: 20px;
+}
+
+.timeGrid p {
+  display: block;
+  margin: 0 5px 40px 0;
+}
+
+.timeGrid .left_labels {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 25px;
+}
+
+.timeGrid .canv {
+  display: inline-block;
+  position: relative;
+}
+
+/*****form inputs****/
+.inputs {
+  border-top: 2px solid var(--theme-color);
+  border-bottom: 2px solid var(--theme-color);
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  padding: 10px 0 10px 0;
+  margin-top: 10px;
+  width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: var(--theme-black);
+  color: white;
+}
+
+.labels {
+  display: inline;
+  margin: auto;
+  font-weight: bold;
+}
+
+.h_inputs {
+  display: inline;
+  width: 100px;
+}
+
+#no_inputs {
+  display: inline;
+  margin: auto;
+  position: static;
+  margin: 10px;
+}
+
+.out_btn {
+  display: block;
+  margin: auto;
+  margin-left: 25px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+#submit_btn {
+  display: inline;
+  background-color: var(--theme-color);
+  color: white;
+  font-size: 15px;
+  margin: 10px;
+}
+
+#submit_btn:hover {
+  background-color: rgb(141, 141, 141);
+  color: var(--theme-color);
+}
+
+/*********************************/

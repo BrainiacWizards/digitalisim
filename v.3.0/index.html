@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/navbar.css">
+  <link rel="stylesheet" href="../main.css">
+  <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon">
+  <title>DigitaliSim | Latches/FlipFlops</title>
+</head>
+
+<body>
+  <div class="area">
+    <nav class="main-menu">
+      <ul>
+        <li>
+          <a href="./index.html">
+            <i class="fa fa-home fa-2x"></i>
+            <span class="nav-text">
+              Flip-Flops
+            </span>
+          </a>
+
+        </li>
+        <li class="has-subnav">
+          <a href="./truthTable.html">
+            <i class="fa fa-solid fa-table fa-2x"></i>
+            <span class="nav-text">
+              Truth Table
+            </span>
+          </a>
+
+        </li>
+        <li class="has-subnav">
+          <a href="./adders.html">
+            <i class="fa fa-solid fa-calculator fa-2x"></i>
+            <span class="nav-text">
+              Adders
+            </span>
+          </a>
+
+        </li>
+        <li>
+          <a href="./tools.html">
+            <i class="fa fa-cogs fa-2x"></i>
+            <span class="nav-text">
+              Tools & Resources
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fa fa-info fa-2x"></i>
+            <span class="nav-text">
+              Documentation
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="logout">
+        <li>
+          <a href="#">
+            <i class="fa fa-palette fa-2x" style="scale: 0.7;"></i>
+            <span class="nav-text">
+              <select name="theme" id="themeOpt" style="top: 0; left: 0;">
+                <option value="bp">Black & Purple</option>
+                <option value="bg">Black & Green</option>
+                <option value="gp">Grey & Purple</option>
+                <option value="gg">Grey & Green</option>
+              </select>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-power-off fa-2x"></i>
+            <span class="nav-text">
+              Logout
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <container class="bod">
+    <select name="options" id="logic_options">
+      <option value="default">Select Option</option>
+      <option value="ah-sr">Active-high SR Latch</option>
+      <option value="al-sr">Active-low SR Latch</option>
+      <option value="d-latch">Gated D Latch</option>
+      <option value="d-ff">D Flip-Flop</option>
+      <option value="jk-ff">JK Flip-Flop</option>
+    </select>
+
+    <div class="row" id="active-high-sr">
+      <h2 id="row-title">Active_High SR-Latch</h2>
+      <div class="io-column">
+        <button id="s" class="button_input">S</button>
+        <button id="r" class="button_input">R</button>
+      </div>
+      <div class="column">
+        <img class="image" src="./assets/img/active-high-sr.png" alt="SR Latch" style="margin-top: 10px" />
+      </div>
+      <div class="io-column">
+        <button id="q" class="button_output">Q</button>
+        <button id="qNOT" class="button_output">Q`</button>
+      </div>
+    </div>
+
+    <div class="row" id="active-low-sr">
+      <h2 id="row_title">Active_Low SR-Latch</h2>
+      <div class="io-column">
+        <button id="ls" class="button_input">S</button>
+        <button id="lr" class="button_input">R</button>
+      </div>
+      <div class="column">
+        <img class="image" src="./assets/img/active-low-sr.png" alt="Active low SR Latch" />
+      </div>
+      <div class="io-column">
+        <button id="lq" class="button_output">Q</button>
+        <button id="lqNOT" class="button_output">Q`</button>
+      </div>
+    </div>
+
+    <div class="row" id="gated-d-latch">
+      <h2 id="row_title">Gated D-Latch</h2>
+      <div class="io-column">
+        <button id="ds" class="button-g-input">S</button>
+        <button id="den" class="button-g-input">D</button>
+      </div>
+      <div class="column">
+        <img id="dlatch" src="./assets/img/gated-d-latch.png" alt="Gated D Latch" />
+      </div>
+      <div class="io-column">
+        <button id="dq" class="button-g-output">Q</button>
+        <button id="dqNOT" class="button-g-output">Q`</button>
+      </div>
+    </div>
+
+    <div class="row" id="d-flip-flop">
+      <h2 id="row_title">D Flip-Flop</h2>
+      <div class="io-column">
+        <button id="dFFs" class="button-g-input">S</button>
+        <button id="dFFen" class="clock-btn">D</button>
+      </div>
+      <div class="column">
+        <img id="dff-image" src="./assets/img/d-flip-flop.png" alt="D Flip-Flop" />
+      </div>
+      <div class="io-column">
+        <button id="dFFq" class="button-g-output">Q</button>
+        <button id="dFFqNOT" class="button-g-output">Q`</button>
+      </div>
+      <div class="bottom_btns">
+        <button class="startBtn" id="startDFF">Start/Stop</button>
+        <select name="edgeTrig" id="edge">
+          <option value="up">Positive-edge</option>
+          <option value="down">Negative-edge</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="row" id="jk_flip_flop">
+      <h2 id="row_title">JK Flip-Flop</h2>
+      <div class="io-column-jkInputs">
+        <button id="JKFFj" class="button-jk-input">J</button>
+        <button id="JKFFclk" class="clock-jkbtn">clk</button>
+        <button id="JKFFk" class="button-jk-input">K</button>
+      </div>
+      <div class="column">
+        <img id="jkff-image" src="./assets/img/jk-flip-flop.png" alt="JK Flip-Flop" style="margin-top: -7px;" />
+      </div>
+      <div class="io-column">
+        <button id="JKFFq" class="button-g-output">Q</button>
+        <button id="JKFFnotq" class="button-g-output">Q`</button>
+      </div>
+      <div class="bottom_btns">
+        <button class="startBtn" id="startJKFF">Start/Stop</button>
+
+        <select name="edgeTrig" id="edge">
+          <option value="up">Positive-edge</option>
+          <option value="down">Negative-edge</option>
+        </select>
+      </div>
+
+    </div>
+
+  </container>
+
+  <div class="footer">
+    <p>Copyright &copy; 2023</p>
+    <p>Developer: <a target="_blank" href="https://mmpotulo.pages.dev">Manelisi Mpotulo</a></p>
+  </div>
+
+  <script src="./assets/js/ch7.js"></script>
+  <script src="../main.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "cb2c44b3b0f1449b9a62490daa7124e6"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+  <script src="https://kit.fontawesome.com/cda065bf16.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

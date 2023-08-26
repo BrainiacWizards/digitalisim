@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href=".\assets\css\style.css" />
+  <link rel="stylesheet" href=".\assets\css\navbar.css" />
+  <link rel="stylesheet" href=".\assets\css\tTable.css" />
+  <link rel="stylesheet" href="../main.css">
+  <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon">
+  <title>DigitaliSim | Truth-table Generator</title>
+</head>
+
+<body>
+
+  <container class="bod">
+    <div class="area">
+      <nav class="main-menu">
+        <ul>
+          <li>
+            <a href="./index.html">
+              <i class="fa fa-home fa-2x"></i>
+              <span class="nav-text">
+                Flip-Flops
+              </span>
+            </a>
+
+          </li>
+          <li class="has-subnav">
+            <a href="./truthTable.html">
+              <i class="fa fa-solid fa-table fa-2x"></i>
+              <span class="nav-text">
+                Truth Table
+              </span>
+            </a>
+
+          </li>
+          <li class="has-subnav">
+            <a href="./adders.html">
+              <i class="fa fa-solid fa-calculator fa-2x"></i>
+              <span class="nav-text">
+                Adders
+              </span>
+            </a>
+
+          </li>
+          <li>
+            <a href="./tools.html">
+              <i class="fa fa-cogs fa-2x"></i>
+              <span class="nav-text">
+                Tools & Resources
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa fa-info fa-2x"></i>
+              <span class="nav-text">
+                Documentation
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="logout">
+          <li>
+            <a href="#">
+              <i class="fa fa-palette fa-2x" style="scale: 0.7;"></i>
+              <span class="nav-text">
+                <select name="theme" id="themeOpt" style="top: 0; left: 0;">
+                  <option value="bp">Black & Purple</option>
+                  <option value="bg">Black & Green</option>
+                  <option value="gp">Grey & Purple</option>
+                  <option value="gg">Grey & Green</option>
+                </select>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-power-off fa-2x"></i>
+              <span class="nav-text">
+                Logout
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <container class="dis_container">
+      <h1 class="title_h">Instructions for Truth Table</h1>
+      <p>1. 1st choose the correct combinational logic above</p>
+      <p>2. columns are from A-D and rows are 1-8, for example if you want to
+        chooose a certain output, say the 1st logic gate is B1</p>
+      <p>3. 1st Choose the inputs and logic gate on row 1, it you require extra Gates
+        , you may utilise other rows,
+      <p>
+      <p>4. Select the number of Input your combinational Logic Circuit has,
+        (A,B,C,D). FOR NOW THE ALGORITHM CAN ONLY TAKE 4 INPUTS
+      </p>
+      <p>5. Then click generate!</p>
+      <p>6. If a column title is red, that means you have not selected the input variable</p>
+      <p>8. ignore empty cells in the Truth-table</p>
+      <p>9. R3o represents the output of row 3, same thing as for others</p>
+      <p>10. if you want auto generated inputs, click "auto generate"</p>
+      <p> Note: all input fields will be cleared</p>
+      <p>11. if a certain variable is no filled in, it will be auto generated.</p>
+      <p>12. !! A is the master input, if you are not auto generating, then it must be filled in.</p>
+
+      <h3>Suggestions window will be avaiable soon</h3>
+    </container>
+
+
+  </container>
+
+  <div class="footer">
+    <p>Copyright &copy; 2023</p>
+    <p> Developer:
+      <a target="_blank" href="https://mmpotulo.pages.dev">Manelisi Mpotulo</a>
+    </p>
+  </div>
+
+  <script type="module" src=".\assets\js\gates.js"></script>
+  <script type="module" src=".\assets\js\tTable.js"></script>
+  <script type="module" src="./assets/js/canvas.js"></script>
+  <script src="../main.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "cb2c44b3b0f1449b9a62490daa7124e6"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+  <script src="https://kit.fontawesome.com/cda065bf16.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

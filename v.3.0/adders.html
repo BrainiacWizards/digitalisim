@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/adders.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon">
+    <title>DigitaliSim | Digital Adders</title>
+</head>
+
+<body>
+    <div class="area">
+        <nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Flip-Flops
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="./truthTable.html">
+                        <i class="fa fa-solid fa-table fa-2x"></i>
+                        <span class="nav-text">
+                            Truth Table
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="./adders.html">
+                        <i class="fa fa-solid fa-calculator fa-2x"></i>
+                        <span class="nav-text">
+                            Adders
+                        </span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-cogs fa-2x"></i>
+                        <span class="nav-text">
+                            Tools & Resources
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                            Documentation
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-palette fa-2x" style="scale: 0.7;"></i>
+                        <span class="nav-text">
+                            <select name="theme" id="themeOpt" style="top: 0; left: 0;">
+                                <option value="bp">Black & Purple</option>
+                                <option value="bg">Black & Green</option>
+                                <option value="gp">Grey & Purple</option>
+                                <option value="gg">Grey & Green</option>
+                            </select>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <container class=" bod">
+        <select name="options" id="logic_options">
+            <option value="default">Select Option</option>
+            <option value="half_add">Half Adder</option>
+            <option value="full_add">Full Adder</option>
+            <option value="4bit_add">4 bit binary adder</option>
+        </select>
+        <div class="inputs">
+            <form>
+                <label for="A" class="labels">A: </label>
+                <input id="A" class="h_inputs" type="text" placeholder="Enter A in binary">
+
+                <label for="B" class="labels">B: </label>
+                <input id="B" class="h_inputs" type="text" placeholder="Enter B binary">
+
+                <button id="submit_btn" type="submit" value="Submit">Enter</button>
+            </form>
+        </div>
+
+        <div class="row" id="halfadder">
+            <container class="logic_con">
+
+                <div class="img_column">
+                    <img class="image" src="./assets/img/half-adder.png" alt="SR Latch" style="margin-top: 10px" />
+                </div>
+                <br><br>
+
+                <!--Truth Table-->
+                <table class="truth_table">
+                    <tbody class="tt_bodyHA">
+                        <tr class="title_row">
+                            <td class="title_col">
+                            </td>
+                            <td class="tt_data colA">
+                                <p>A</p>
+                            </td>
+                            <td class="tt_data colB">
+                                <p>B</p>
+                            </td>
+                            <td class="tt_data colC">
+                                <p>Sum</p>
+                            </td>
+                            <td class="tt_data colD">
+                                <p>Cout</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </container>
+        </div>
+
+        <div class="row" id="fulladder">
+            <container class="logic_con">
+                <div class="img_column">
+                    <img class="image" src="./assets/img/half-adder.png" alt="SR Latch" style="margin-top: 10px" />
+                </div>
+                <br><br>
+
+                <!--Truth Table-->
+                <table class="truth_table">
+                    <tbody class="tt_bodyFA">
+                        <tr class="title_row">
+                            <td class="tt_data colA">
+                                <p>A</p>
+                            </td>
+                            <td class="tt_data colB">
+                                <p>B</p>
+                            </td>
+                            <td class="tt_data colA">
+                                <p>Cin</p>
+                            </td>
+                            <td class="tt_data colC">
+                                <p>Sum</p>
+                            </td>
+                            <td class="tt_data colD">
+                                <p>Cout</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </container>
+        </div>
+    </container>
+
+    <div class="footer">
+        <p>Copyright &copy; 2023</p>
+        <p>Developer: <a target="_blank" href="https://mmpotulo.pages.dev">Manelisi Mpotulo</a></p>
+    </div>
+
+    <script type="module" src="./assets/js/adders.js"></script>
+    <script src="../main.js"></script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "cb2c44b3b0f1449b9a62490daa7124e6"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+    <script src="https://kit.fontawesome.com/cda065bf16.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

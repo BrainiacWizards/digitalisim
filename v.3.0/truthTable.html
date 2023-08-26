@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href=".\assets\css\style.css" />
+  <link rel="stylesheet" href=".\assets\css\navbar.css" />
+  <link rel="stylesheet" href=".\assets\css\tTable.css" />
+  <link rel="stylesheet" href="../main.css">
+  <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon">
+  <title>DigitaliSim | Truth-table Generator</title>
+</head>
+
+<body>
+
+  <container class="bod">
+    <div class="area">
+      <nav class="main-menu">
+        <ul>
+          <li>
+            <a href="./index.html">
+              <i class="fa fa-home fa-2x"></i>
+              <span class="nav-text">
+                Flip-Flops
+              </span>
+            </a>
+
+          </li>
+          <li class="has-subnav">
+            <a href="./truthTable.html">
+              <i class="fa fa-solid fa-table fa-2x"></i>
+              <span class="nav-text">
+                Truth Table
+              </span>
+            </a>
+
+          </li>
+          <li class="has-subnav">
+            <a href="./adders.html">
+              <i class="fa fa-solid fa-calculator fa-2x"></i>
+              <span class="nav-text">
+                Adders
+              </span>
+            </a>
+
+          </li>
+          <li>
+            <a href="./tools.html">
+              <i class="fa fa-cogs fa-2x"></i>
+              <span class="nav-text">
+                Tools & Resources
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./help.html">
+              <i class="fa fa-info fa-2x"></i>
+              <span class="nav-text">
+                Help
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="logout">
+          <li>
+            <a href="#">
+              <i class="fa fa-palette fa-2x" style="scale: 0.7;"></i>
+              <span class="nav-text">
+                <select name="theme" id="themeOpt" style="top: 0; left: 0;">
+                  <option value="bp">Black & Purple</option>
+                  <option value="bg">Black & Green</option>
+                  <option value="gp">Grey & Purple</option>
+                  <option value="gg">Grey & Green</option>
+                </select>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-power-off fa-2x"></i>
+              <span class="nav-text">
+                Logout
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <container class="t_container">
+
+      <table class="table_config">
+        <!--title row-->
+        <tr class="title_row">
+          <td>
+            <p>Inputs</p>
+          </td>
+          <td>
+            <p>Logic Gates</p>
+          </td>
+          <td>
+            <p>Inputs</p>
+          </td>
+          <td>
+            <p>Logic Gates</p>
+          </td>
+          <td>
+            <p>Row Outputs</p>
+          </td>
+        </tr>
+        <!--row 1-->
+        <tr>
+          <td>
+            <select name="" id="in1A1">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+            </select>
+            <select name="" id="in2A1">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="B1">
+              <option value="null">null</option>
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+              <option value="NOR">NOR</option>
+              <option value="NAND">NAND</option>
+              <option value="XOR">XOR</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="in1C1">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+            </select>
+            <select name="" id="in2C1">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="D1">
+              <option value="null">null</option>
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+              <option value="NOR">NOR</option>
+              <option value="NAND">NAND</option>
+              <option value="XOR">XOR</option>
+            </select>
+          </td>
+          <td>
+            <button class="row_outputs" id="row1btn">X</button>
+          </td>
+        </tr>
+        <!--row 2-->
+        <tr>
+          <td>
+            <select name="" id="in1A2">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+            </select>
+            <select name="" id="in2A2">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="B2">
+              <option value="null">null</option>
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+              <option value="NOR">NOR</option>
+              <option value="NAND">NAND</option>
+              <option value="XOR">XOR</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="in1C2">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+            </select>
+            <select name="" id="in2C2">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="D2">
+              <option value="null">null</option>
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+              <option value="NOR">NOR</option>
+              <option value="NAND">NAND</option>
+              <option value="XOR">XOR</option>
+            </select>
+          </td>
+          <td>
+            <button class="row_outputs" id="row2btn">X</button>
+          </td>
+        </tr>
+        <!--row 3-->
+        <tr>
+          <td>
+            <select name="" id="in1A3">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+            </select>
+            <select name="" id="in2A3">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="B3">
+              <option value="null">null</option>
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+              <option value="NOR">NOR</option>
+              <option value="NAND">NAND</option>
+              <option value="XOR">XOR</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="in1C3">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+            </select>
+            <select name="" id="in2C3">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="D3">
+              <option value="null">null</option>
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+              <option value="NOR">NOR</option>
+              <option value="NAND">NAND</option>
+              <option value="XOR">XOR</option>
+            </select>
+          </td>
+          <td>
+            <button class="row_outputs" id="row3btn">X</button>
+          </td>
+        </tr>
+        <!--row 4-->
+        <tr>
+          <td>
+            <select name="" id="in1A4">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+            </select>
+            <select name="" id="in2A4">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="B4">
+              <option value="null">null</option>
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+              <option value="NOR">NOR</option>
+              <option value="NAND">NAND</option>
+              <option value="XOR">XOR</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="in1C4">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+              <option value="R4o">R4o</option>
+              <option value="notR4o">R4o'</option>
+            </select>
+            <select name="" id="in2C4">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+              <option value="R4o">R4o</option>
+              <option value="notR4o">R4o'</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="D4">
+              <option value="null">null</option>
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+              <option value="NOR">NOR</option>
+              <option value="NAND">NAND</option>
+              <option value="XOR">XOR</option>
+            </select>
+          </td>
+          <td>
+            <button class="row_outputs" id="row4btn">X</button>
+          </td>
+        </tr>
+        <!--row 5-->
+        <tr>
+          <td>
+            <select name="" id="in1A5">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+              <option value="R4o">R4o</option>
+              <option value="notR4o">R4o'</option>
+            </select>
+            <select name="" id="in2A5">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+              <option value="R4o">R4o</option>
+              <option value="notR4o">R4o'</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="B5">
+              <option value="null">null</option>
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+              <option value="NOR">NOR</option>
+              <option value="NAND">NAND</option>
+              <option value="XOR">XOR</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="in1C5">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+              <option value="R4o">R4o</option>
+              <option value="notR4o">R4o'</option>
+              <option value="R5o">R5o</option>
+              <option value="notR5o">R5o'</option>
+            </select>
+            <select name="" id="in2C5">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+              <option value="R4o">R4o</option>
+              <option value="notR4o">R4o'</option>
+              <option value="R5o">R5o</option>
+              <option value="notR5o">R5o'</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="D5">
+              <option value="null">null</option>
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+              <option value="NOR">NOR</option>
+              <option value="NAND">NAND</option>
+              <option value="XOR">XOR</option>
+            </select>
+          </td>
+          <td>
+            <button class="row_outputs" id="row5btn">X</button>
+          </td>
+        </tr>
+        <!--row 6-->
+        <tr>
+          <td>
+            <select name="" id="in1A6">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+              <option value="R4o">R4o</option>
+              <option value="notR4o">R4o'</option>
+              <option value="R5o">R5o</option>
+              <option value="notR5o">R5o'</option>
+            </select>
+            <select name="" id="in2A6">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+              <option value="R4o">R4o</option>
+              <option value="notR4o">R4o'</option>
+              <option value="R5o">R5o</option>
+              <option value="notR5o">R5o'</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="B6">
+              <option value="null">null</option>
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+              <option value="NOR">NOR</option>
+              <option value="NAND">NAND</option>
+              <option value="XOR">XOR</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="in1C6">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+              <option value="R4o">R4o</option>
+              <option value="notR4o">R4o'</option>
+              <option value="R5o">R5o</option>
+              <option value="notR5o">R5o'</option>
+              <option value="R6o">R6o</option>
+              <option value="notR6o">R6o'</option>
+            </select>
+            <select name="" id="in2C6">
+              <option value="null">null</option>
+              <option value="A">A</option>
+              <option value="notA">A'</option>
+              <option value="B">B</option>
+              <option value="notB">B'</option>
+              <option value="C">C</option>
+              <option value="notC">C'</option>
+              <option value="D">D</option>
+              <option value="notD">D'</option>
+              <option value="R1o">R1o</option>
+              <option value="notR1o">R1o'</option>
+              <option value="R2o">R2o</option>
+              <option value="notR2o">R2o'</option>
+              <option value="R3o">R3o</option>
+              <option value="notR3o">R3o'</option>
+              <option value="R4o">R4o</option>
+              <option value="notR4o">R4o'</option>
+              <option value="R5o">R5o</option>
+              <option value="notR5o">R5o'</option>
+              <option value="R6o">R6o</option>
+              <option value="notR6o">R6o'</option>
+            </select>
+          </td>
+          <td>
+            <select name="" id="D6">
+              <option value="null">null</option>
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+              <option value="NOR">NOR</option>
+              <option value="NAND">NAND</option>
+              <option value="XOR">XOR</option>
+            </select>
+          </td>
+          <td>
+            <button class="row_outputs" id="row6btn">X</button>
+          </td>
+        </tr>
+      </table>
+
+      <div class="tt_configs">
+
+        <p>Select Number of Inputs:
+          <select name="no_inputs" id="no_inputs">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </p>
+
+      </div>
+      <button class="gen_btn" id="autogen">Auto generate</button>
+    </container>
+
+    <container class="t_container">
+      <!--Truth Table-->
+      <h2 style="margin-top: 0;">Truth Table</h2>
+      <table class="truth_table">
+        <tbody class="tt_body">
+          <tr class="title_row">
+            <td class="tt_data colA">
+              <p>A</p>
+            </td>
+            <td class="tt_data colB">
+              <p>B</p>
+            </td>
+            <td class="tt_data colC">
+              <p>C</p>
+            </td>
+            <td class="tt_data colD">
+              <p>D</p>
+            </td>
+            <td class="tt_data colE">
+              <p>output</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </container>
+
+    <container class="t_container">
+      <h2>Timing Diagram</h2>
+      <div class="timeGrid">
+        <div class="left_labels">
+          <p>Q: </p>
+          <p>A: </p>
+          <p>B: </p>
+          <p>C: </p>
+          <p>D: </p>
+        </div>
+
+        <div class="canv">
+          <canvas id="mycanvas" width="1000" height="300"></canvas>
+        </div>
+      </div>
+    </container>
+
+    <container class="dis_container">
+      <h1 class="title_h">Instructions</h1>
+      <p>1. 1st choose the correct combinational logic above</p>
+      <p>2. columns are from A-D and rows are 1-8, for example if you want to
+        chooose a certain output, say the 1st logic gate is B1</p>
+      <p>3. 1st Choose the inputs and logic gate on row 1, it you require extra Gates
+        , you may utilise row 2,
+      <p>
+      <p>Note that: the outputs fo the second row are generate after that of 1st row,
+        so it is adviced that you click generate twice, to make sure your answer is correct
+      </p>
+      <p>5. Select the number of Input your combinational Logic Circuit has,
+        (A,B,C,D). FOR NOW THE ALGORITHM CAN ONLY TAKE 3 INPUTS
+      </p>
+      <p>6. Then click generate!</p>
+      <p>7. If a column title is red, that means you have not selected the input variable</p>
+      <p>8. ignore empty cells in the Truth-table</p>
+      <p>9. R3o represents the output of row 3, same thing as for others</p>
+      <p>10. if you want auto generated inputs, click "auto generate"</p>
+      <p> Note: all input fields will be cleared</p>
+      <p>11. if a certain variable is no filled in, it will be auto generated.</p>
+      <p>12. !! A is the master input, if you are not auto generating, then it must be filled in.</p>
+
+      <h3>Suggestions window will be avaiable soon</h3>
+    </container>
+
+
+  </container>
+
+  <div class="footer">
+    <p>Copyright &copy; 2023</p>
+    <p> Developer:
+      <a target="_blank" href="https://mmpotulo.pages.dev">Manelisi Mpotulo</a>
+    </p>
+  </div>
+
+  <script type="module" src=".\assets\js\gates.js"></script>
+  <script type="module" src=".\assets\js\tTable.js"></script>
+  <script type="module" src="./assets/js/canvas.js"></script>
+  <script src="../main.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "cb2c44b3b0f1449b9a62490daa7124e6"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+  <script src="https://kit.fontawesome.com/cda065bf16.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

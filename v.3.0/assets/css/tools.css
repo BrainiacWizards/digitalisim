@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+.toolGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-right: 50px;
+    justify-content: center;
+    width: fit-content;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+}
+
+.toolItem {
+    display: block;
+    padding: 4px;
+    background-color: var(--theme-black);
+    box-shadow: 5px 10px 5px 0px var(--theme-color);
+    border: 2px solid var(--theme-color);
+    color: white;
+    text-align: center;
+    width: 130px;
+    height: fit-content;
+}
+
+.toolItem input {
+    display: inline;
+    width: 40px;
+}
+
+.toolItem label {
+    display: inline;
+    float: left;
+}
+
+.toolItem button {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    color: white;
+    background-color: var(--theme-color);
+}
