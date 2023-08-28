@@ -13,132 +13,138 @@
 </head>
 
 <body>
-  <div class="area">
-    <nav class="main-menu">
-      <ul>
-        <li>
-          <a href="./index.html">
-            <i class="fa fa-home fa-2x"></i>
-            <span class="nav-text">
-              Flip-Flops
-            </span>
-          </a>
+  <header>
+    <div class="area">
+      <nav class="main-menu">
+        <ul>
+          <li>
+            <a href="./index.html">
+              <i class="fa fa-home fa-2x"></i>
+              <span class="nav-text">
+                Flip-Flops
+              </span>
+            </a>
 
-        </li>
-        <li class="has-subnav">
-          <a href="./truthTable.html">
-            <i class="fa fa-solid fa-table fa-2x"></i>
-            <span class="nav-text">
-              Truth Table
-            </span>
-          </a>
+          </li>
+          <li class="has-subnav">
+            <a href="./truthTable.html">
+              <i class="fa fa-solid fa-table fa-2x"></i>
+              <span class="nav-text">
+                Truth Table
+              </span>
+            </a>
 
-        </li>
-        <li class="has-subnav">
-          <a href="./adders.html">
-            <i class="fa fa-solid fa-calculator fa-2x"></i>
-            <span class="nav-text">
-              Adders
-            </span>
-          </a>
+          </li>
+          <li class="has-subnav">
+            <a href="./adders.html">
+              <i class="fa fa-solid fa-calculator fa-2x"></i>
+              <span class="nav-text">
+                Adders
+              </span>
+            </a>
 
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-cogs fa-2x"></i>
-            <span class="nav-text">
-              Tools & Resources
-            </span>
-          </a>
-        </li>
+          </li>
+          <li>
+            <a href="./tools.html">
+              <i class="fa fa-cogs fa-2x"></i>
+              <span class="nav-text">
+                Tools & Resources
+              </span>
+            </a>
+          </li>
 
-        <li>
-          <a href="#">
-            <i class="fa fa-info fa-2x"></i>
-            <span class="nav-text">
-              Documentation
-            </span>
-          </a>
-        </li>
-      </ul>
+          <li>
+            <a href="#">
+              <i class="fa fa-info fa-2x"></i>
+              <span class="nav-text">
+                Documentation
+              </span>
+            </a>
+          </li>
+        </ul>
 
-      <ul class="logout">
-        <li>
-          <a href="#">
-            <i class="fa fa-palette fa-2x" style="scale: 0.7;"></i>
-            <span class="nav-text">
-              <select name="theme" id="themeOpt" style="top: 0; left: 0;">
-                <option value="bp">Black & Purple</option>
-                <option value="bg">Black & Green</option>
-                <option value="gp">Grey & Purple</option>
-                <option value="gg">Grey & Green</option>
-              </select>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa fa-power-off fa-2x"></i>
-            <span class="nav-text">
-              Logout
-            </span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+        <ul class="logout">
+          <li>
+            <a href="#">
+              <i class="fa fa-power-off fa-2x"></i>
+              <span class="nav-text">
+                Logout
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="themePicker">
+      <form class="themeForm">
+        <fieldset>
+          <legend class="hidden">Pick theme: </legend>
+          <i class="fa fa-palette theme-icon"></i>
+          <label class="hidden" for="bp">Black-Purple</label>
+          <input type="radio" name="theme" id="bp" checked>
+          <label class="hidden" for="bg">Black-Green</label>
+          <input type="radio" name="theme" id="bg">
+          <label class="hidden" for="gp">Grey-Purple</label>
+          <input type="radio" name="theme" id="gp">
+          <label class="hidden" for="gg">Grey-Green</label>
+          <input type="radio" name="theme" id="gg">
+        </fieldset>
+      </form>
+    </div>
+  </header>
 
   <container class="bod">
     <div class="toolGrid">
-        <div class="toolItem">
-            <h2>CLOCK</h2>
-            <form id="clock-form">
-                <label for="freq">Frequency</label>
-                <input type="number" name="freq" id="freq">
-                <button type="submit">enter</button>
-            </form>
-        </div>
-        <div class="toolItem">
-            <h2>Gates</h2>
-            <form id="gate-form">
-                <label for="freq">Frequency</label>
-                <input type="number" name="freq" id="freq">
-                <button type="submit">enter</button>
-            </form>
-        </div>
-        <div class="toolItem">
-            <h2>CLOCK</h2>
-            <form>
-                <label for="freq">Frequency</label>
-                <input type="number" name="freq" id="freq">
-                <button type="submit">enter</button>
-            </form>
-            
-        </div>
-        <div class="toolItem">
-            <h2>CLOCK</h2>
-            <form>
-                <label for="freq">Frequency</label>
-                <input type="number" name="freq" id="freq">
-                <button type="submit">enter</button>
-            </form>
-        </div>
-        <div class="toolItem">
-            <h2>demo</h2>
-            <form>
-                <label for="freq">Frequency</label>
-                <input type="number" name="freq" id="freq">
-                <button type="submit">enter</button>
-            </form>
-        </div>
-        <div class="toolItem">
-            <h2>CLOCK</h2>
-            <form>
-                <label for="freq">Frequency</label>
-                <input type="number" name="freq" id="freq">
-                <button type="submit">enter</button>
-            </form>
-        </div>
+      <div class="toolItem">
+        <h2>CLOCK</h2>
+        <form id="clock-form">
+          <label for="freq">Frequency</label>
+          <input type="number" name="freq" id="freq">
+          <button type="submit">enter</button>
+        </form>
+      </div>
+      <div class="toolItem">
+        <h2>Gates</h2>
+        <form id="gate-form">
+          <label for="freq">Frequency</label>
+          <input type="number" name="freq" id="freq">
+          <button type="submit">enter</button>
+        </form>
+      </div>
+      <div class="toolItem">
+        <h2>CLOCK</h2>
+        <form>
+          <label for="freq">Frequency</label>
+          <input type="number" name="freq" id="freq">
+          <button type="submit">enter</button>
+        </form>
+
+      </div>
+      <div class="toolItem">
+        <h2>CLOCK</h2>
+        <form>
+          <label for="freq">Frequency</label>
+          <input type="number" name="freq" id="freq">
+          <button type="submit">enter</button>
+        </form>
+      </div>
+      <div class="toolItem">
+        <h2>demo</h2>
+        <form>
+          <label for="freq">Frequency</label>
+          <input type="number" name="freq" id="freq">
+          <button type="submit">enter</button>
+        </form>
+      </div>
+      <div class="toolItem">
+        <h2>CLOCK</h2>
+        <form>
+          <label for="freq">Frequency</label>
+          <input type="number" name="freq" id="freq">
+          <button type="submit">enter</button>
+        </form>
+      </div>
     </div>
 
   </container>
