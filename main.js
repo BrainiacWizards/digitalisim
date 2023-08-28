@@ -29,7 +29,7 @@ function loadTheme() {
 
     //load background theme color from local storage
     const localTheme = localStorage.getItem('background-theme');
-    if(localTheme){ //if there is a theme in local storage
+    if (localTheme) { //if there is a theme in local storage
         black = localTheme;
     } else { //else set it to default (dark theme)
         black = -1;

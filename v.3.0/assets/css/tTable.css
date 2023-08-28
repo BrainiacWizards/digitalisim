@@ -1,10 +1,17 @@
+#truthTable_stuff {
+    display: block;
+    width: fit-content;
+    max-width: 90%;
+    padding: 0;
+    margin: auto;
+}
+
 .t_container {
     padding: 15px;
     display: block;
     float: left;
+    margin-right: 40px;
     margin-left: 0;
-    margin-right: 50px;
-    margin-top: 0;
     margin-bottom: 20px;
     width: fit-content;
     min-width: 470px;
@@ -13,7 +20,7 @@
     color: var(--font-color);
     font-weight: bold;
     text-align: center;
-    box-shadow: 5px 5px 10px var(--theme-color);
+    box-shadow: 5px 5px 5px var(--theme-color);
     overflow: hidden;
     position: relative;
 }

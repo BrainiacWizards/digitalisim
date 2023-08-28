@@ -196,9 +196,9 @@ function row1() {
         in1c1 = gates.notGate(D)
         dCheck.push(1)
     } else if (in1C1.value == "R1o") {
-        in1c1 = outputR1
+        in1c1 = B1o
     } else if (in1C1.value == "notB1o") {
-        in1c1 = gates.notGate(outputR1)
+        in1c1 = gates.notGate(B1o)
     }
     if (in2C1.value == "A") { //input 2 on C1
         in2c1 = A
@@ -225,9 +225,9 @@ function row1() {
         in2c1 = gates.notGate(D)
         dCheck.push(1)
     } else if (in2C1.value == "R1o") {
-        in1c1 = outputR1
+        in1c1 = B1o
     } else if (in2C1.value == "notR1o") {
-        in2c1 = gates.notGate(outputR1)
+        in2c1 = gates.notGate(B1o)
     }
     //log Column A inputs
     //console.log("in1c1: " + in1c1 + " in2c1: " + in2c1)
@@ -962,7 +962,7 @@ function row5() {
         B5o = null //if no gate is not selected and both inputs are not chosen
     }
 
-    //set the output for row 4
+    //set the output for row 5
     outputR5 = B5o
 
     /***************input logic for D5***********************/
@@ -1407,39 +1407,8 @@ export function truthTable() {
         row5()
         row6()
 
-        /********************set main output (using the last row with an output)**********************/
-
-        if (outputR6 == null) { //if row 6 has no output, then check row 5
-
-            if (outputR5 == null) { //if row 5 has no output, then check row 4
-
-                if (outputR4 == null) { //if row 4 has no output, then check row 3
-
-                    if (outputR3 == null) { //if row 3 has no output, then check row 2
-
-                        if (outputR2 == null) { //if row 2 has no output, then check row 1
-
-                            if (outputR1 == null) {//if row 1 has not output, set the output to null
-                                output = null
-                            } else { //end if row 1
-                                output = outputR1
-                            }
-                        } else { //end if row 2
-                            output = outputR2
-                        }
-                    } else { //end if row 3
-                        output = outputR3
-                    }
-                } else { //end if row 4
-                    output = outputR4
-                }
-            } else { //end if row 5
-                output = outputR5
-            }
-        } else { //end if row 6
-            output = outputR6
-        }
-
+        //set final output
+        finalOutDecider()
 
         //push all outputs to the main output array
         genOut.push(output)
@@ -1485,6 +1454,54 @@ export function truthTable() {
         row6btn.style.backgroundColor = "red"
     }
 
+    //check which inputs are used
+    inputChecker()
+
+    //append trut table values to html pages
+    domOperation()
+
+    //call timing diagram funciton on canvas.js
+    canvas.drawCanvas()
+}
+
+/*******final output decider*******/
+function finalOutDecider() {
+    /********************set main output (using the last row with an output)**********************/
+
+    if (outputR6 == null) { //if row 6 has no output, then check row 5
+
+        if (outputR5 == null) { //if row 5 has no output, then check row 4
+
+            if (outputR4 == null) { //if row 4 has no output, then check row 3
+
+                if (outputR3 == null) { //if row 3 has no output, then check row 2
+
+                    if (outputR2 == null) { //if row 2 has no output, then check row 1
+
+                        if (outputR1 == null) {//if row 1 has not output, set the output to null
+                            output = null
+                        } else { //end if row 1
+                            output = outputR1
+                        }
+                    } else { //end if row 2
+                        output = outputR2
+                    }
+                } else { //end if row 3
+                    output = outputR3
+                }
+            } else { //end if row 4
+                output = outputR4
+            }
+        } else { //end if row 5
+            output = outputR5
+        }
+    } else { //end if row 6
+        output = outputR6
+    }
+}
+
+/******input checker function*****/
+function inputChecker() {
     //declare column class variables
     const colA = document.querySelector(".colA")
     const colB = document.querySelector(".colB")
@@ -1552,17 +1569,14 @@ export function truthTable() {
     }
     //check if output is not null
     if (output == null) {
-        genOut = ["null"]
+        genOut = null
     } else {
         genOut = genOut
     }
+}
 
-
-    /*prefill form values
-    Ainput = document.querySelector("#A").value = genInA.toString()
-    Binput = document.querySelector("#B").value = genInB.toString()*/
-
-    //display the output
+/*******DOM Operations************/
+function domOperation() {
     for (let i = 0; i < genOut.length; i++) {
         tbody.innerHTML += `
         <tr class="tt_row" id="row${i + 1}">
@@ -1584,39 +1598,4 @@ export function truthTable() {
         </tr>
         `
     }
-    //call timing diagram funciton
-    canvas.drawCanvas()
-}
-
-/****Theme picker****/
-const themeOpt = document.querySelector("#themeOpt")
-
-themeOpt.onchange = function theme() {
-
-    if (themeOpt.value == "gg") {
-        document.body.classList.remove("GP-theme")
-        document.body.classList.remove("BP-theme")
-        document.body.classList.remove("BG-theme")
-        document.body.classList.add("GG-theme")
-        console.log("theme GG");
-    } else if (themeOpt.value == "gp") {
-        document.body.classList.remove("GG-theme")
-        document.body.classList.remove("BP-theme")
-        document.body.classList.remove("BG-theme")
-        document.body.classList.add("GP-theme")
-        console.log("theme GP");
-    } else if (themeOpt.value == "bg") {
-        document.body.classList.remove("GG-theme")
-        document.body.classList.remove("GP-theme")
-        document.body.classList.remove("BP-theme")
-        document.body.classList.add("BG-theme")
-        console.log("theme BG");
-    } else {
-        document.body.classList.remove("GG-theme")
-        document.body.classList.remove("GP-theme")
-        document.body.classList.remove("BG-theme")
-        document.body.classList.add("BP-theme")
-        console.log("theme BP");
-    }
-
 }
