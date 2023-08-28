@@ -1,5 +1,5 @@
 .t_container {
-    padding: 3%;
+    padding: 15px;
     display: block;
     float: left;
     margin-left: 0;
@@ -7,12 +7,13 @@
     margin-top: 0;
     margin-bottom: 20px;
     width: fit-content;
-    min-width: 500px;
+    min-width: 470px;
     height: fit-content;
     background-color: var(--theme-black);
-    color: white;
+    color: var(--font-color);
+    font-weight: bold;
     text-align: center;
-    box-shadow: 10px 10px 15px var(--theme-color);
+    box-shadow: 5px 5px 10px var(--theme-color);
     overflow: hidden;
     position: relative;
 }
@@ -35,9 +36,9 @@ h2 {
     width: fit-content;
     min-width: 500px;
     height: fit-content;
-    background-color: lightgray;
-    color: black;
-    font: 18px arial bold;
+    background-color: var(--theme-black);
+    color: var(--font-color);
+    font: 18px bold;
     text-align: left;
     box-shadow: 10px 10px 15px var(--theme-color);
     overflow: hidden;
@@ -71,6 +72,8 @@ table {
     background-color: white;
     color: black;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 tr {
@@ -78,22 +81,8 @@ tr {
     border: 2px solid rgb(91, 91, 91);
     width: fit-content;
     min-width: 100%;
-
-}
-
-.title_row {
-    background-color: var(--theme-black);
-    color: white;
-}
-.title_col {
-    background-color: var(--theme-black);
-    color: white;
-    max-width: 5px;
-}
-
-.title_row td p {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 td {
@@ -103,10 +92,38 @@ td {
     min-width: 70px;
     font-weight: bold;
     align-content: center;
+}
+
+table caption {
+    font-size: 17px;
+    font-weight: normal;
+    text-align: center;
+    color: var(--font-color);
+    background-color: var(--theme-black);
+    border-bottom: 2px solid var(--font-color);
+    padding-bottom: 15px;
+    border-radius: 20% 20% 0 0;
 
 }
 
-select {
+.title_row {
+    background-color: var(--theme-black);
+    color: var(--font-color);
+    font-weight: 900;
+}
+
+.title_col {
+    background-color: var(--theme-black);
+    color: var(--font-color);
+    max-width: 5px;
+}
+
+.title_row td p {
+    padding: 0;
+    margin: 0;
+}
+
+table select {
     display: block;
     margin: auto;
     border: none;

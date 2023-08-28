@@ -80,15 +80,15 @@
       <form class="themeForm">
         <fieldset>
           <legend class="hidden">Pick theme: </legend>
-          <i class="fa fa-palette theme-icon"></i>
-          <label class="hidden" for="bp">Black-Purple</label>
-          <input type="radio" name="theme" id="bp" checked>
-          <label class="hidden" for="bg">Black-Green</label>
-          <input type="radio" name="theme" id="bg">
-          <label class="hidden" for="gp">Grey-Purple</label>
-          <input type="radio" name="theme" id="gp">
-          <label class="hidden" for="gg">Grey-Green</label>
-          <input type="radio" name="theme" id="gg">
+          <button id="themeButton"><i class="fa fa-palette theme-icon"></i></button>
+          <label class="hidden" for="bp">Purple</label>
+          <input type="radio" name="theme" id="purple" checked>
+          <label class="hidden" for="bg">Green</label>
+          <input type="radio" name="theme" id="green">
+          <label class="hidden" for="gp">Pink</label>
+          <input type="radio" name="theme" id="pink">
+          <label class="hidden" for="gg">Blue</label>
+          <input type="radio" name="theme" id="blue">
         </fieldset>
       </form>
     </div>
@@ -97,24 +97,24 @@
   <container class="bod">
 
     <container class="t_container">
-
       <table class="table_config">
+        <caption>Configure combinational logic Circuit</caption>
         <!--title row-->
         <tr class="title_row">
           <td>
             <p>Inputs</p>
           </td>
           <td>
-            <p>Logic Gates</p>
+            <p>Gates</p>
           </td>
           <td>
             <p>Inputs</p>
           </td>
           <td>
-            <p>Logic Gates</p>
+            <p>Gates</p>
           </td>
           <td>
-            <p>Row Outputs</p>
+            <p>indicator</p>
           </td>
         </tr>
         <!--row 1-->
