@@ -13,8 +13,7 @@
 </head>
 
 <body>
-
-  <container class="bod">
+  <header>
     <div class="area">
       <nav class="main-menu">
         <ul>
@@ -55,29 +54,16 @@
           </li>
 
           <li>
-            <a href="./help.html">
+            <a href="#">
               <i class="fa fa-info fa-2x"></i>
               <span class="nav-text">
-                Help
+                Documentation
               </span>
             </a>
           </li>
         </ul>
 
         <ul class="logout">
-          <li>
-            <a href="#">
-              <i class="fa fa-palette fa-2x" style="scale: 0.7;"></i>
-              <span class="nav-text">
-                <select name="theme" id="themeOpt" style="top: 0; left: 0;">
-                  <option value="bp">Black & Purple</option>
-                  <option value="bg">Black & Green</option>
-                  <option value="gp">Grey & Purple</option>
-                  <option value="gg">Grey & Green</option>
-                </select>
-              </span>
-            </a>
-          </li>
           <li>
             <a href="#">
               <i class="fa fa-power-off fa-2x"></i>
@@ -89,6 +75,26 @@
         </ul>
       </nav>
     </div>
+
+    <div class="themePicker">
+      <form class="themeForm">
+        <fieldset>
+          <legend class="hidden">Pick theme: </legend>
+          <i class="fa fa-palette theme-icon"></i>
+          <label class="hidden" for="bp">Black-Purple</label>
+          <input type="radio" name="theme" id="bp" checked>
+          <label class="hidden" for="bg">Black-Green</label>
+          <input type="radio" name="theme" id="bg">
+          <label class="hidden" for="gp">Grey-Purple</label>
+          <input type="radio" name="theme" id="gp">
+          <label class="hidden" for="gg">Grey-Green</label>
+          <input type="radio" name="theme" id="gg">
+        </fieldset>
+      </form>
+    </div>
+  </header>
+
+  <container class="bod">
 
     <container class="t_container">
 
