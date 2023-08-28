@@ -9,22 +9,31 @@ html {
   padding: 0;
 }
 
-:root:has(#bg:checked) {
-  --theme-color: Green;
+/* default theme */
+:root {
   --theme-black: black;
+  --font-color: white;
 }
 
-:root:has(#bp:checked) {
-  --theme-color: #2e029d;
-  --theme-black: black;
+:root:has(#green:checked) {
+  --theme-color: rgba(0, 128, 0, 0.747);
 }
-:root:has(#gg:checked) {
-  --theme-color: Green;
-  --theme-black: grey;
-}
-:root:has(#gp:checked) {
+
+:root:has(#purple:checked) {
   --theme-color: #2e029d;
-  --theme-black: grey;
+}
+
+:root:has(#pink:checked) {
+  --theme-color: rgba(245, 1, 212, 0.699);
+}
+
+:root:has(#blue:checked) {
+  --theme-color: rgba(0, 0, 255, 0.753);
+}
+
+.light {
+  --theme-black: rgb(180, 180, 180);
+  --font-color: black;
 }
 
 .main_body {
@@ -80,46 +89,54 @@ html {
   width: fit-content;
 }
 
+.themePicker button {
+  appearance: none;
+  background-color: transparent;
+  width: fit-content;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
 .themePicker input[type="radio"] {
   appearance: none;
   width: 15px;
   height: 15px;
-  outline: 2px solid var(--radio-outline-color);
-  border: 2px solid var(--radio-border-color);
+  outline: 2px solid var(--radio-border-color);
+  background-color: aliceblue;
   outline-offset: 2px;
-  border-radius:  0  0  50% 50%;
+  border-radius: 50%;
 }
 
 /*style each radio input*/
-.themePicker input[type="radio"]#bg {
-  --radio-outline-color: black;
-  --radio-border-color: green;
+.themePicker input[type="radio"]#purple {
 
-}
-
-.themePicker input[type="radio"]#bp {
-  --radio-outline-color: black;
   --radio-border-color: #2e029d;
 }
 
-.themePicker input[type="radio"]#gg {
-  --radio-outline-color: grey;
-  --radio-border-color: green;
+.themePicker input[type="radio"]#green {
+  --radio-border-color: rgba(0, 128, 0, 0.747);
 }
 
-.themePicker input[type="radio"]#gp {
-  --radio-outline-color: grey;
-  --radio-border-color: #2e029d;
+.themePicker input[type="radio"]#pink {
+  --radio-border-color: rgba(245, 1, 212, 0.699);
+}
+
+.themePicker input[type="radio"]#blue {
+  --radio-border-color: rgba(0, 0, 255, 0.753);
 }
 
 .themePicker input[type="radio"]:checked {
-  background-color: var(--radio-border-color);
+  background-color: var(--theme-color);
 }
 
 .themePicker i {
   font-size: 20px;
-  color: var(--theme-color);
-  margin-right: 10px;
+  color: var(--theme-black);
+  padding: 0;
+  margin: 0;
 }
 
 /* hide themelabesl from user, but visible to bots */
