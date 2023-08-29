@@ -45,3 +45,47 @@ body {
     color: white;
     background-color: var(--theme-color);
 }
+
+.converters {
+  display: block;
+  margin: auto;
+  width: 180px;
+  max-width: fit-content;
+  margin-top: 50px;
+  border: 2px solid grey;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.converter-form input {
+  display: inline-block;
+  width: 80%;
+  min-width: 20px;
+  margin: 10px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.converter-form .errors {
+  color: red;
+}
+
+.conv-output {
+  display: block;
+  margin: auto;
+  background: linear-gradient(rgb(210, 210, 210), rgb(50, 50, 50));
+  border-radius: 20px;
+  width: fit-content;
+  margin-top: 10px;
+  padding: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.conv-output #decValue {
+  font-weight: bold;
+  color: white;
+}
