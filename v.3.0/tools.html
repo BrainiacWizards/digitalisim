@@ -104,14 +104,19 @@
           <button type="submit">enter</button>
         </form>
       </div>
-      <div class="toolItem">
-        <h2>Gates</h2>
-        <form id="gate-form">
-          <label for="freq">Frequency</label>
-          <input type="number" name="freq" id="freq">
-          <button type="submit">enter</button>
-        </form>
+    <div class="converters">
+      <form class="converter-form">
+        <p class="errors"></p>
+        <label>Value in Binary:</label>
+        <input id="bin" name="value" placeholder="0000" type="text">
+        <button type="submit">Enter</button>
+      </form>
+
+      <div class="conv-output">
+        <p>Value in Decimal: </p>
+        <p id="decValue"></p>
       </div>
+    </div>
       <div class="toolItem">
         <h2>CLOCK</h2>
         <form>
