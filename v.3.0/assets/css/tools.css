@@ -24,7 +24,7 @@ body {
     border: 2px solid var(--theme-color);
     color: white;
     text-align: center;
-    width: 130px;
+    width: 150px;
     height: fit-content;
 }
 
@@ -47,26 +47,23 @@ body {
 }
 
 .converters {
-  display: block;
-  margin: auto;
-  width: 180px;
-  max-width: fit-content;
-  margin-top: 50px;
-  border: 2px solid grey;
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  font-weight: bold;
+    display: block;
+    margin: auto;
+    width: 200px;
+    max-width: fit-content;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
 }
-
 .converter-form input {
-  display: inline-block;
-  width: 80%;
-  min-width: 20px;
-  margin: 10px;
-  border: 1px solid grey;
-  border-radius: 20px;
-  text-align: center;
+    display: inline-block;
+    width: 80%;
+    min-width: 20px;
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    text-align: center;
+    padding: 4px;
 }
 
 .converter-form .errors {
