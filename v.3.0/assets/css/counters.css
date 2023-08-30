@@ -1,0 +1,29 @@
+.counter_configs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.counter_configs input {
+    width: 50px;
+}
+
+.counter_configs button {
+    background-color: var(--theme-color);
+    color: white;
+}
+
+.output-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 120px;
+}
+
+.output-btn button {
+    background-color: var(--theme-color);
+    color: white;
+}

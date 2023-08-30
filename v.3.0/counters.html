@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href=".\assets\css\style.css" />
+    <link rel="stylesheet" href=".\assets\css\navbar.css" />
+    <link rel="stylesheet" href=".\assets\css\tTable.css" />
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="./assets/css/counters.css">
+    <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon">
+    <title>DigitaliSim | Counters</title>
+</head>
+
+<body>
+    <header>
+        <div class="area">
+            <nav class="main-menu">
+                <ul>
+                    <li>
+                        <a href="./index.html">
+                            <i class="fa fa-home fa-2x"></i>
+                            <span class="nav-text">
+                                Flip-Flops
+                            </span>
+                        </a>
+
+                    </li>
+                    <li class="has-subnav">
+                        <a href="./truthTable.html">
+                            <i class="fa fa-solid fa-table fa-2x"></i>
+                            <span class="nav-text">
+                                Truth Table
+                            </span>
+                        </a>
+
+                    </li>
+                    <li class="has-subnav">
+                        <a href="./adders.html">
+                            <i class="fa fa-solid fa-calculator fa-2x"></i>
+                            <span class="nav-text">
+                                Adders
+                            </span>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="./tools.html">
+                            <i class="fa fa-cogs fa-2x"></i>
+                            <span class="nav-text">
+                                Tools & Resources
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-info fa-2x"></i>
+                            <span class="nav-text">
+                                Help
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./counters.html">
+                            <i class="fa fa-plus fa-2x"></i>
+                            <span class="nav-text">
+                                Counters
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="logout">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-power-off fa-2x"></i>
+                            <span class="nav-text">
+                                Logout
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="themePicker">
+            <form class="themeForm">
+                <fieldset>
+                    <legend class="hidden">Pick theme: </legend>
+                    <button id="themeButton"><i class="fa fa-palette theme-icon"></i></button>
+                    <label class="hidden" for="bp">Purple</label>
+                    <input type="radio" name="theme" id="purple" checked>
+                    <label class="hidden" for="bg">Green</label>
+                    <input type="radio" name="theme" id="green">
+                    <label class="hidden" for="gp">Pink</label>
+                    <input type="radio" name="theme" id="pink">
+                    <label class="hidden" for="gg">Blue</label>
+                    <input type="radio" name="theme" id="blue">
+                </fieldset>
+            </form>
+        </div>
+    </header>
+
+    <container class="bod">
+
+        <container class="t_container">
+            <h1>Counters</h1>
+            <p>Counters are sequential circuits that count in a specific sequence. They are made up of flip-flops which
+                are
+                connected in such a way as to perform the counting operation. The output of one flip-flop is connected
+                to the
+                input of the next flip-flop in the chain. The output of the last flip-flop is connected to the input of
+                the
+                first flip-flop. The output of each flip-flop represents a different bit in the binary number sequence,
+                and the
+                number of flip-flops used determines the number of bits in the sequence. The flip-flops are triggered by
+                a clock
+                pulse at the clock input. The clock pulse causes the flip-flops to change state in a particular
+                sequence. The
+                sequence of the counter is determined by the way the flip-flops are connected together. The sequence of
+                the
+                counter can be determined from the following table which shows the sequence of a 3-bit binary counter.
+            </p>
+        </container>
+        <container class="t_container">
+            <h1>Synchronous Counter</h1>
+
+            <div class="counter_configs">
+                <form class="counter-form">
+                    <label for="D">D: </label>
+                    <input type="number" name="D" id="d" placeholder="0">
+
+                    <button type="submit">Enter</button>
+                </form>
+            </div>
+
+            <div class="main_sim">
+                <img class="counter-img" src="./assets/img/asyn-counter.png" alt="async-counter-img">
+                <div class="output-btn">
+                    <button id="q0">Q0</button>
+                    <button id="q1">Q1</button>
+                    <button id="q2">Q2</button>
+                    <button id="q3">Q3</button>
+                </div>
+            </div>
+
+        </container>
+    </container>
+
+    <div class="footer">
+        <p>Copyright &copy; 2023</p>
+        <p> Developer:
+            <a target="_blank" href="https://mmpotulo.pages.dev">Manelisi Mpotulo</a>
+        </p>
+    </div>
+
+    <script type="module" src=".\assets\js\gates.js"></script>
+    <script type="module" src="./assets/js/counters.js"></script>
+    <script src="../main.js"></script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "cb2c44b3b0f1449b9a62490daa7124e6"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+    <script src="https://kit.fontawesome.com/cda065bf16.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

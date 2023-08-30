@@ -15,9 +15,11 @@ body {
 .bod {
   display: block;
   margin-top: 30px;
+  margin-bottom: 100px;
   margin-left: 100px;
   position: static;
   min-width: 500px;
+  float: left;
 }
 
 a {
