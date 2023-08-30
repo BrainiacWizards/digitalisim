@@ -69,7 +69,7 @@ export function norGate(in1, in2) {
 }
 
 /************function for a clock***********/
-let clk = 0, clkC = 1, edge = 0, timer = 0
+let clk = 0, clkC = -1, edge = 0, timer = 0
 export function clock() {
 
     //assign prev clock value to the temp variable
