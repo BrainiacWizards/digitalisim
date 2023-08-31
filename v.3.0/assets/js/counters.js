@@ -1,3 +1,4 @@
+//import
 import * as gates from './gates.js'
 
 //variables
