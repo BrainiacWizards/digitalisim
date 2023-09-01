@@ -124,6 +124,46 @@
 
         </container>
 
+        <!--  Counter Truth Table -->
+        <container class="t_container">
+            <!--Truth Table-->
+            <h2 style="margin-top: 0;">Truth Table</h2>
+            <table class="truth_table">
+              <tbody class="tt_body">
+                <tr class="title_row">
+                  <td class="tt_data colA">
+                    <p>Q3</p>
+                  </td>
+                  <td class="tt_data colB">
+                    <p>Q2</p>
+                  </td>
+                  <td class="tt_data colC">
+                    <p>Q1</p>
+                  </td>
+                  <td class="tt_data colD">
+                    <p>Q0</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </container>
+    
+          <container class="t_container">
+            <h2>Timing Diagram</h2>
+            <div class="timeGrid">
+              <div class="left_labels">
+                <p>Q0: </p>
+                <p>Q1: </p>
+                <p>Q2: </p>
+                <p>Q3: </p>
+              </div>
+    
+              <div class="canv">
+                <canvas id="mycanvas" width="1000" height="300"></canvas>
+              </div>
+            </div>
+          </container>
+
         <container class="dis_container">
             <h1>Counters</h1>
             <p>Counters are sequential circuits that count in a specific sequence. They are made up of flip-flops which
