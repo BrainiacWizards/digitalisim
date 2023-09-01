@@ -27,6 +27,7 @@ sync_start.addEventListener('click', function (e) {
     q3 = 0
     q3Btn.innerHTML = q3
 
+    resetTable() //reset table gefore generating new one
     sync()
 })
 
@@ -68,8 +69,15 @@ function sync() {
             q3Btn.innerHTML = q3
         }
 
+        //truthtable
+        if (Dedge == 1) {
+            truthTable(q0, q1, q2, q3)
+        }
 
-        window.requestAnimationFrame(sync)
+        //stop at 15 (maximum count of 4 bit counter)
+        if(!(q0 == 1 && q1 == 1 && q2 == 1 && q3 == 1)){
+            window.requestAnimationFrame(sync)
+        }
     }
 }
 
@@ -85,3 +93,52 @@ function flipFlop(clk, q, high) {
     return q
 }
 
+///*******Truth table variables*****************/
+//reference truth table
+const tbody = document.querySelector(".tt_body")
+
+//reset table before generating new one
+function resetTable() {
+    tbody.innerHTML = `
+    <tr class="tt_row">
+          <td class="tt_data">
+            Q3
+          </td>
+          <td class="tt_data">
+          Q2
+          </td>
+          <td class="tt_data">
+          Q1
+          </td>
+          <td class="tt_data">
+          Q0
+          </td>
+        </tr>
+        `
+}
+
+/***********************Generate Truth-Table***********************/
+function truthTable(q0, q1, q2, q3) {
+    console.clear()
+
+    //DOM Operation
+    tbody.innerHTML += `
+        <tr class="tt_row">
+          <td class="tt_data">
+            ${q3}
+          </td>
+          <td class="tt_data">
+          ${q2}
+          </td>
+          <td class="tt_data">
+          ${q1}
+          </td>
+          <td class="tt_data">
+          ${q0}
+          </td>
+        </tr>
+        `
+
+    //call timing diagram funciton on canvas.js
+    //canvas.drawCanvas()
+}
