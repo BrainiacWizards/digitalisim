@@ -1,6 +1,6 @@
-import * as tTable from './tTable.js'
+// Desc: This file contains the code for the canvas
 
-export function drawCanvas() {
+export function drawCanvas(in1, in2, in3, in4, in5) {
     //Step 1: Get Canvas reference, and get webgl context
     let canvas = document.querySelector("canvas");
     let gl = canvas.getContext("webgl");
@@ -11,12 +11,18 @@ export function drawCanvas() {
     gl.enable(gl.DEPTH_TEST);
 
     //Step 3: Set Vertices in Array form
-    var genInA = tTable.genInA
-    var genInB = tTable.genInB
-    var genInC = tTable.genInC
-    var genInD = tTable.genInD
-    var genOut = tTable.genOut
-    var no_inputs = tTable.noIns
+    var genInA = in1
+    var genInB = in2
+    var genInC = in3
+    var genInD = in4
+    var genOut = in5
+
+    //log console
+    console.log("genInA: " + genInA)
+    console.log("genInB: " + genInB)
+    console.log("genInC: " + genInC)
+    console.log("genInD: " + genInD)
+    console.log("genOut: " + genOut)
 
     var lineOut = [
         //Q
@@ -248,6 +254,7 @@ void main(){
         }
 
     }
+
 
     draw();
 
