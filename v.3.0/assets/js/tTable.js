@@ -90,6 +90,7 @@ const no_inputs = document.querySelector("#no_inputs")
 export var noIns = no_inputs.value
 //reference truth table
 const tbody = document.querySelector(".tt_body")
+var htmlContent = ''
 
 /***********************Row 1***********************/
 function row1() {
@@ -1348,6 +1349,7 @@ export function resetTable() {
     R1arr = []; R2arr = []; R3arr = []; R4arr = []; R5arr = []; R6arr = []
 
     //reset Table structure
+    htmlContent = ''
     tbody.innerHTML = `
     <tr class="title_row">
           <td class="tt_data colA">
@@ -1372,27 +1374,28 @@ export function resetTable() {
 /***********************Generate Truth-Table***********************/
 export function truthTable() {
     console.clear()
-    resetTable() //reset table gefore generating new one
+    //reset table gefore generating new one
+    resetTable()
 
-    //check for the number of inputs selected
-    if (no_inputs.value == 2) {
+    //check for the number of inputs selected, and set the correct number of bits
+    if (no_inputs.value == 2) { //4bits
         genInA = [0, 0, 1, 1]
         genInB = [0, 1, 0, 1]
         genInC = ["", "", "", ""]
         genInD = ["", "", "", ""]
-    } else if (no_inputs.value == 3) {
+    } else if (no_inputs.value == 3) { //8 bits
         genInA = [0, 0, 0, 0, 1, 1, 1, 1]
         genInB = [0, 0, 1, 1, 0, 0, 1, 1]
         genInC = [0, 1, 0, 1, 0, 1, 0, 1]
         genInD = ["", "", "", "", "", "", "", ""]
-    } else if (no_inputs.value == 4) {
+    } else if (no_inputs.value == 4) { //16 bit
         genInA = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1]
         genInB = [0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1]
         genInC = [0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1]
         genInD = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
     }
 
-    //generate the output array
+    //generate the output array [main output generator logic]
     for (let i = 0; i < genInA.length; i++) {
         A = genInA[i]
         B = genInB[i]
@@ -1457,11 +1460,12 @@ export function truthTable() {
     //check which inputs are used
     inputChecker()
 
-    //append trut table values to html pages
+    //append truth table values to html pages
     domOperation()
+    tbody.innerHTML += htmlContent //add the html content to the body of the table
 
     //call timing diagram funciton on canvas.js
-    canvas.drawCanvas()
+    canvas.drawCanvas(genInA, genInB, genInC, genInD, genOut)
 }
 
 /*******final output decider*******/
@@ -1578,7 +1582,7 @@ function inputChecker() {
 /*******DOM Operations************/
 function domOperation() {
     for (let i = 0; i < genOut.length; i++) {
-        tbody.innerHTML += `
+        htmlContent += `
         <tr class="tt_row" id="row${i + 1}">
           <td class="tt_data colA">
             ${genInA[i]}

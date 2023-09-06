@@ -1,7 +1,6 @@
 #truthTable_stuff {
     display: block;
     width: fit-content;
-    max-width: 90%;
     padding: 0;
     margin: auto;
 }
@@ -40,7 +39,7 @@ h2 {
     margin-right: 50px;
     margin-top: 30px;
     margin-bottom: 100px;
-    width: fit-content;
+    width: 95%;
     min-width: 500px;
     height: fit-content;
     background-color: rgb(90, 90, 90);
