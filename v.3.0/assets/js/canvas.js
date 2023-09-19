@@ -2,7 +2,7 @@
 
 export function drawCanvas(in1, in2, in3, in4, in5) {
     
-const canvas = document.getElementById("myCanvas");
+const canvas = document.getElementById("mycanvas");
 const ctx = canvas.getContext("2d");
 canvas.height = 350
 ctx.transform(1, 0, 0, -1, 0, canvas.height)
