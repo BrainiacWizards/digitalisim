@@ -1,13 +1,12 @@
 // Desc: This file contains the code for the canvas
 //global variables
 var intercept
-
-export function drawCanvas(in1, in2, in3, in4, in5) {
-    
 const canvas = document.querySelector("#mycanvas")
 const ctx = canvas.getContext("2d");
 canvas.height = 350
 ctx.transform(1, 0, 0, -1, 0, canvas.height)
+
+export function drawCanvas(in1, in2, in3, in4, in5) {
 
 let arr = in1
 let arr2 = in2
@@ -22,7 +21,9 @@ draw(arr3, 20, 150)
 
 //draw bars
 drawBar(arr, 25, 350)
+	
 }
+
 function draw(arr, x, yPos){
 
 	for(let i = 0; i < arr.length; i++){
