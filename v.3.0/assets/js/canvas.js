@@ -1,55 +1,77 @@
-// Desc: This file contains the code for the canvas
-//global variables
-var intercept
+/** Description: 
+ * This file contains the code for the canvas
+ * it is on truth table page and on counter page
+ * later it will be added on flipflops and other pages
+**/
+
 const canvas = document.querySelector("#mycanvas")
 const ctx = canvas.getContext("2d");
 canvas.height = canvas.height
 canvas.width = canvas.width
 ctx.transform(1, 0, 0, -1, 0, canvas.height)
 
-export function drawCanvas(in1, in2, in3, in4, in5) {
+//Global variables
+let intercept = 0
+let Ampl = 50
 
-    let arr = in1
+export function drawCanvas(in1, in2, in3, in4, in5) {
+    //clear canvas stroke before drawing again
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.setTransform(1, 0, 0, -1, 0, canvas.height)
+    ctx.beginPath()
+
+    let arr = in5 //genOut
+    let arr1 = in1
     let arr2 = in2
     let arr3 = in3
+    let arr4 = in4
 
-    //alert(in1, in2)
+    //set canvas witch and height to fit the graph
+    canvas.width = arr.length * Ampl + 40
+    ctx.setTransform(1, 0, 0, -1, 0, canvas.height)
+
+    //draw genout array
+    draw(arr, 20, 20)
+
     //draw for 1st array
-    draw(arr, 20, -50)
-    //draw for second array
-    //draw(arr2, 20, 50)
+    draw(arr1, 20, 100)
+
+    //draw 2nd array
+    draw(arr2, 20, 180)
+
     //draw 3rd array
-    //draw(arr3, 20, 150)
+    draw(arr3, 20, 260)
 
-    //draw bars
-    drawBar(arr, 25, 350)
+    //draw 4th array
+    draw(arr4, 20, 330)
 
-    window.requestAnimationFrame(drawCanvas())
+    //draw bars using the lenth of the 1st input array
+    drawBar(arr1, 25, canvas.height + 30)
 }
 
 function draw(arr, x, yPos) {
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] == 1) { //draw highs
-            intercept = 270 - yPos //set it to up
+            intercept = canvas.height - yPos //set it to up
             //sektch
             ctx.moveTo(x, intercept);
-            ctx.lineTo(x + 50, intercept);
+            ctx.lineTo(x + Ampl, intercept);
 
             //draw edge if the next is not on same level
             if (arr[i + 1] == 0) {
-                ctx.lineTo(x+50, 200 - yPos);
+                ctx.lineTo(x + Ampl, (canvas.height - Ampl) - yPos);
             }
 
         } else if (arr[i] == 0) { //draw lows
-            intercept = 200 - yPos //set it to up
+            intercept = (canvas.height - Ampl) - yPos //set it to up
             //sektch
             ctx.moveTo(x, intercept);
-            ctx.lineTo(x + 50, intercept);
+            ctx.lineTo(x + Ampl, intercept);
 
             //draw edge if the next is not on same level
             if (arr[i + 1] == 1) {
-                ctx.lineTo(x+50, 270 - yPos);
+                ctx.lineTo(x + Ampl, canvas.height - yPos);
             }
         }
 
@@ -57,7 +79,7 @@ function draw(arr, x, yPos) {
         ctx.stroke();
 
         //shift horizontaly
-        x += 50
+        x += Ampl
     }
 }
 
@@ -76,8 +98,8 @@ function drawBar(arr, x, y) {
             y -= 20
         }
 
-        x += 50
-        y = 350
+        x += Ampl
+        y = canvas.height
     }
 
 }
