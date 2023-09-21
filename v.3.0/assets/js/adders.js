@@ -1,5 +1,8 @@
 import * as gates from "./gates.js"
-
+if (!sessionStorage.getItem('loggedIn')) {
+    //redirect to main page
+    window.location.href = "./login.html"        
+  }
 var A, B
 var hfAin = null, hfBin = null, hfSum = null, hfCout = null
 var Aarr = [], Barr = [], Sarr = [], CoutArr = [], CinArr = [0]

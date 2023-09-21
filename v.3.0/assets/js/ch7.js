@@ -1,3 +1,8 @@
+if (!sessionStorage.getItem('loggedIn')) {
+  //redirect to main page
+  window.location.href = "./login.html"        
+}
+
 //row ID's
 const option = document.querySelector('#logic_options')
 const AH_SR = document.querySelector('#active-high-sr')

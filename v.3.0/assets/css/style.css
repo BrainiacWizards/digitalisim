@@ -367,3 +367,89 @@ canvas {
 }
 
 /*********************************/
+.login_sec {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.login_cont {
+  display: block;
+  width: fit-content;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  background-color: var(--theme-black);
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: var(--theme-color) 5px 5px 10px 0px;
+}
+
+.login_cont h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px -3px grey;
+}
+
+.login_form {
+  display: block;
+  width: fit-content;
+}
+
+.login_cont .login_input {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.login_input label {
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.login_input input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid grey;
+  background-color: rgb(199, 197, 197);
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  transition: ease-in-out 0.5s;
+}
+
+.login_input input:focus {
+  outline: 2px solid var(--theme-color);
+
+  transition: ease-in-out 0.2s;
+}
+
+.login_form button {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--theme-color);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: ease-in-out 1.0s;
+  cursor: pointer;
+}
+
+.login_form button:hover {
+  background-color: var(--theme-black);
+  box-shadow: var(--theme-color) 0px 0px 5px 5px;
+  transition: ease-out 0.3s;
+}

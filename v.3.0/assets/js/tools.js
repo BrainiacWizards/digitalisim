@@ -1,3 +1,7 @@
+if (!sessionStorage.getItem('loggedIn')) {
+  //redirect to main page
+  window.location.href = "./login.html"        
+}
 const convform = document.querySelector(".converter-form");
 const dec = document.querySelector("#dec");
 const bin = document.querySelector("#bin");

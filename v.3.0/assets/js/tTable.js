@@ -1,6 +1,9 @@
 import * as gates from './gates.js'
 import * as canvas from './canvas.js'
-
+if (!sessionStorage.getItem('loggedIn')) {
+    //redirect to main page
+    window.location.href = "./login.html"        
+  }
 //get variable from index.html
 //selctor inputs
 //row 1

@@ -1,7 +1,10 @@
 //import
 import * as gates from './gates.js'
 import * as canvas from './canvas.js'
-
+if (!sessionStorage.getItem('loggedIn')) {
+    //redirect to main page
+    window.location.href = "./login.html"        
+  }
 //variables
 var q0 = 0, q1 = 0, q2 = 0, q3 = 0
 var j = 1, k = 1, Dedge = 1
