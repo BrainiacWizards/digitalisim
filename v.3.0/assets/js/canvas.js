@@ -26,10 +26,6 @@ export function drawCanvas(in1, in2, in3, in4, in5) {
     let arr3 = in3
     let arr4 = in4
 
-    //set canvas witch and height to fit the graph
-    canvas.width = arr.length * Ampl + 40
-    ctx.setTransform(1, 0, 0, -1, 0, canvas.height)
-
     //draw genout array
     draw(arr, 20, 20)
 

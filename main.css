@@ -76,10 +76,11 @@ html {
 .themePicker {
   display: block;
   width: fit-content;
-  margin-left: 70px;
+  margin-left: 0px;
   padding: 4px;
   border-radius: 0 0 1rem 0;
-  background-color: lightgrey;
+  background-color: transparent;
+  box-shadow: 1px 0px 3px var(--theme-color);
 }
 
 .themePicker fieldset {
@@ -136,7 +137,7 @@ html {
 
 .themePicker i {
   font-size: 20px;
-  color: var(--theme-black);
+  color: var(--theme-color);
   padding: 0;
   margin: 0;
 }
