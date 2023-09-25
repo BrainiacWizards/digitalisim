@@ -73,49 +73,6 @@
           </li>
         </ul>
       </nav>
-      <div class="tools_sidebar">
-        <div class="tools_header">
-          <i class="fa fa-list"></i>
-          <select
-            class="tools_sidebar_content"
-            name="tools-option"
-            id="tool-option"
-          >
-            <option value="default">Select Tool</option>
-            <option value="logic">Logic Gates</option>
-            <option value="converter">Binary Converter</option>
-            <option value="calculator">Binary Calculator</option>
-          </select>
-        </div>
-        <div class="tools_content">
-          <div class="tools_item tools_conv">
-            <h1>Binary Converter</h1>
-            <form class="tools_conv_form">
-              <div class="conv_input_group">
-                <input type="text" name="binary" id="conv_from" />
-                <select name="options" id="conv_options_from">
-                  <option value="bin">Binary</option>
-                  <option value="dec">Decimal</option>
-                  <option value="hex">Hex</option>
-                </select>
-              </div>
-
-              <div class="conv_input_group">
-                <input type="text" name="decimal" id="conv_to" />
-                <select name="options" id="conv_options_to">
-                  <option value="bin">Binary</option>
-                  <option value="dec">Decimal</option>
-                  <option value="hex">Hex</option>
-                </select>
-              </div>
-
-              <button class="form_button" type="submit" id="convert">
-                Convert
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
     </header>
 
     <container class="bod">
@@ -178,9 +135,6 @@
     </footer>
 
     <script type="module" src="./assets/js/login.js"></script>
-
-    <!-- to be included on every page -->
-    <script src="./assets/js/tools.js"></script>
     <script src="../main.js"></script>
 
     <!-- Cloudflare Web Analytics -->

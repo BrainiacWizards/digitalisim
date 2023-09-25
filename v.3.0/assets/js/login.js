@@ -17,7 +17,7 @@ const admin_creds = {
 
 //check if user is already logged in
 function check_login() {
-    if (sessionStorage.getItem('loggedIn')) {
+    if (sessionStorage.getItem('loggedIn') == 'true') {
         //redirect to main page
         window.location.href = "./index.html"        
     }
