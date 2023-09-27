@@ -2,8 +2,8 @@ import * as gates from './gates.js'
 import * as canvas from './canvas.js'
 if (!sessionStorage.getItem('loggedIn')) {
     //redirect to main page
-    window.location.href = "./login.html"        
-  }
+    window.location.href = "./login.html"
+}
 //get variable from index.html
 //selctor inputs
 //row 1
@@ -94,6 +94,17 @@ export var noIns = no_inputs.value
 //reference truth table
 const tbody = document.querySelector(".tt_body")
 var htmlContent = ''
+
+//Boolean expression variable
+var SOP_StringArray = []
+var SOP_BinArray = []
+const SOP_String = document.querySelector("#sop_exp_string")
+const SOP_Bin = document.querySelector("#sop_exp_bin")
+var POS_StringArray = []
+var POS_BinArray = []
+const POS_String = document.querySelector("#pos_exp_string")
+const POS_Bin = document.querySelector("#pos_exp_bin")
+
 
 /***********************Row 1***********************/
 function row1() {
@@ -1372,6 +1383,10 @@ export function resetTable() {
           </td>
         </tr>`
 
+    //reset boalean expression variables
+    SOP_StringArray = []
+    SOP_BinArray = []
+
 }
 
 /***********************Generate Truth-Table***********************/
@@ -1426,7 +1441,132 @@ export function truthTable() {
         R4arr.push(outputR4)
         R5arr.push(outputR5)
         R6arr.push(outputR6)
+
+        //use SOP to write an Expression in As and Bs
+        if (output == 1) { //sop take only high outputs
+            //check if genOut has a prev input
+            if (SOP_StringArray[i - 1] != null) {
+                SOP_StringArray.push(" + ")
+            }
+
+            //if no of inputs is 2, do for A and B only
+            if (no_inputs.value >= 2) {
+                if (A == 1) {
+                    SOP_StringArray.push("A")
+                } else if (A == 0) {
+                    SOP_StringArray.push("A'")
+                }
+                if (B == 1) {
+                    SOP_StringArray.push("B")
+                } else if (B == 0) {
+                    SOP_StringArray.push("B'")
+                }
+            }
+
+            //if no of inputs is 3, do for A, B and C only
+            if (no_inputs.value >= 3) {
+                if (C == 1) {
+                    SOP_StringArray.push("C")
+                } else if (C == 0) {
+                    SOP_StringArray.push("C'")
+                }
+            }
+
+            //if no of inputs is 4, do for A, B, C and D
+            if (no_inputs.value >= 4) {
+                if (D == 1) {
+                    SOP_StringArray.push("D")
+                } else if (D == 0) {
+                    SOP_StringArray.push("D'")
+                }
+            }
+        }
+        //use SOP to write an expression in 1s and 0s
+        if (output == 1) { //sop take only high outputs
+            if (SOP_BinArray.includes(1) || SOP_BinArray.includes(0)) {
+                SOP_BinArray.push(" + ")
+            }
+
+            if (A === 1 || A === 0) {
+                SOP_BinArray.push(A)
+            }
+            if (B === 1 || B === 0) {
+                SOP_BinArray.push(B)
+            }
+            if (C === 1 || C === 0) {
+                SOP_BinArray.push(C)
+            }
+            if (D === 1 || D === 0) {
+                SOP_BinArray.push(D)
+            }
+        }
+
+        //use POS to write an expression in As and Bs
+        if (output == 0) {
+            //add a bracket before
+            POS_StringArray.push("(")
+
+            //if no of inputs is 2, do for A and B only
+            if (no_inputs.value >= 2) {
+                if (A == 1) {
+                    POS_StringArray.push("A'")
+                } else if (A == 0) {
+                    POS_StringArray.push("A")
+                }
+                if (B == 1) {
+                    POS_StringArray.push("+B'")
+                } else if (B == 0) {
+                    POS_StringArray.push("+B")
+                }
+            }
+
+            //if no of inputs is 3, do for A, B and C only
+            if (no_inputs.value >= 3) {
+                if (C == 1) {
+                    POS_StringArray.push("+C'")
+                } else if (C == 0) {
+                    POS_StringArray.push("+C")
+                }
+            }
+
+            //if no of inputs is 4, do for A, B, C and D
+            if (no_inputs.value >= 4) {
+                if (D == 1) {
+                    POS_StringArray.push("+D'")
+                } else if (D == 0) {
+                    POS_StringArray.push("+D")
+                }
+            }
+            //add a bracket after
+            POS_StringArray.push(") ")
+        }
+
+        //use POS to write an expression in 1s and 0s
+        if (output == 0) {
+            POS_BinArray.push("(")
+
+            if (A === 1 || A === 0) {
+                POS_BinArray.push(A)
+            }
+            if (B === 1 || B === 0) {
+                POS_BinArray.push("+" + B)
+            }
+            if (C === 1 || C === 0) {
+                POS_BinArray.push("+" + C)
+            }
+            if (D === 1 || D === 0) {
+                POS_BinArray.push("+" + D)
+            }
+
+            POS_BinArray.push(") ")
+        }
     }
+
+    //set the html content
+    SOP_String.innerText = SOP_StringArray.join("")
+    SOP_Bin.innerText = SOP_BinArray.join("")
+    POS_String.innerText = POS_StringArray.join("")
+    POS_Bin.innerText = POS_BinArray.join("")
 
     //set row button outputs
     if (!R1arr.includes(null)) {
