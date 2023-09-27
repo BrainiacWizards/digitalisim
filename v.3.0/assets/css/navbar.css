@@ -150,4 +150,31 @@ header {
   color: var(--theme-color);
 }
 
+/**media quries**/
+@media (max-width: 800px) {
 
+  .main-menu .nav-items {
+    float: right;
+    margin-right: 30px;
+  }
+
+  .main-menu .nav-items li,
+  a {
+    display: inline-table;
+    vertical-align: middle;
+    width: 20px;
+    max-height: 50px;
+    max-width: 20px;
+    padding: 0;
+    margin: 0 5px;
+    overflow: hidden;
+    text-wrap: nowrap;
+  }
+
+  .main-menu .nav-items li:hover,
+  a:hover {
+    width: fit-content;
+    max-width: fit-content;
+    transition: all 0.3s ease-in;
+  }
+}
