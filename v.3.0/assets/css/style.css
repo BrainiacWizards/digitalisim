@@ -1,455 +1,530 @@
 html {
-  display: block;
-  margin: 0px;
+ display: block;
+ margin: 0px;
 }
 
 body {
-  display: block;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: rgb(68, 68, 68);
-  overflow: auto;
+ display: block;
+ margin: 0;
+ padding: 0;
+ height: 100%;
+ background-color: rgb(68, 68, 68);
+ overflow: auto;
 }
 
 .bod {
-  display: block;
-  margin-top: 30px;
-  margin-bottom: 100px;
-  margin-left: 100px;
-  position: static;
-  min-width: 500px;
-  float: left;
+ display: block;
+ margin-top: 30px;
+ margin-bottom: 100px;
+ margin-left: 100px;
+ position: static;
+ min-width: 500px;
+ float: left;
 }
 
 a {
-  text-decoration: none;
+ text-decoration: none;
 }
 
 /****Buttons****/
 select {
-  display: block;
-  margin: auto;
-  border: none;
-  margin-bottom: 5px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px;
-  font-size: large;
+ display: block;
+ margin: auto;
+ border: none;
+ margin-bottom: 5px;
+ border-radius: 10px;
+ box-shadow: 2px 2px 5px;
+ font-size: large;
 }
 
 .button_input {
-  background-color: var(--theme-black);
-  border: none;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 4px 2px 75px 0px;
-  cursor: pointer;
-  width: fit-content;
+ background-color: var(--theme-black);
+ border: none;
+ color: white;
+ padding: 10px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ font-size: 16px;
+ margin: 4px 2px 75px 0px;
+ cursor: pointer;
+ width: fit-content;
 }
 
 .button_output {
-  background-color: var(--theme-color);
-  /* Green */
-  border: none;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 20px 2px 50px 0px;
-  cursor: pointer;
-  width: fit-content;
+ background-color: var(--theme-color);
+ /* Green */
+ border: none;
+ color: white;
+ padding: 10px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ font-size: 16px;
+ margin: 20px 2px 50px 0px;
+ cursor: pointer;
+ width: fit-content;
 }
 
 .button-g-input {
-  background-color: var(--theme-black);
-  /* Green */
-  border: none;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 0px 2px 30px 0px;
-  cursor: pointer;
-  width: fit-content;
+ background-color: var(--theme-black);
+ /* Green */
+ border: none;
+ color: white;
+ padding: 10px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ font-size: 16px;
+ margin: 0px 2px 30px 0px;
+ cursor: pointer;
+ width: fit-content;
 }
 
 .clock-btn {
-  background-color: rgb(8, 209, 129);
-  border: none;
-  color: white;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 25px 2px 2px 0px;
-  cursor: pointer;
-  width: fit-content;
+ background-color: rgb(8, 209, 129);
+ border: none;
+ color: white;
+ padding: 5px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ font-size: 16px;
+ font-weight: bold;
+ margin: 25px 2px 2px 0px;
+ cursor: pointer;
+ width: fit-content;
 }
 
 .button-g-output {
-  background-color: var(--theme-color);
-  /* Green */
-  border: none;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 20px 2px 50px 0px;
-  cursor: pointer;
-  width: fit-content;
+ background-color: var(--theme-color);
+ /* Green */
+ border: none;
+ color: white;
+ padding: 10px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ font-size: 16px;
+ margin: 20px 2px 50px 0px;
+ cursor: pointer;
+ width: fit-content;
 }
 
 .bottom_btns {
-  display: block;
-  margin: auto;
+ display: block;
+ margin: auto;
 }
 
 .startBtn {
-  display: block;
-  margin: auto auto 10px auto;
-  align-self: center;
-  position: static;
-  font-size: 20px;
-  border-radius: 5px;
-  background-color: var(--theme-color);
-  color: white;
-  border: 0px solid var(--theme-black);
-  box-shadow: #000000 5px 5px 10px 0px;
-  cursor: pointer;
+ display: block;
+ margin: auto auto 10px auto;
+ align-self: center;
+ position: static;
+ font-size: 20px;
+ border-radius: 5px;
+ background-color: var(--theme-color);
+ color: white;
+ border: 0px solid var(--theme-black);
+ box-shadow: #000000 5px 5px 10px 0px;
+ cursor: pointer;
 }
 
 .button-jk-input {
-  background-color: var(--theme-black);
-  /* Green */
-  border: none;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 0px 2px 20px 0px;
-  cursor: pointer;
-  width: fit-content;
+ background-color: var(--theme-black);
+ /* Green */
+ border: none;
+ color: white;
+ padding: 10px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ font-size: 16px;
+ margin: 0px 2px 20px 0px;
+ cursor: pointer;
+ width: fit-content;
 }
 
 .clock-jkbtn {
-  background-color: rgb(8, 209, 129);
-  border: none;
-  color: white;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0px 2px 10px 0px;
-  cursor: pointer;
-  width: fit-content;
+ background-color: rgb(8, 209, 129);
+ border: none;
+ color: white;
+ padding: 5px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ font-size: 16px;
+ font-weight: bold;
+ margin: 0px 2px 10px 0px;
+ cursor: pointer;
+ width: fit-content;
 }
 
 select {
-  text-align: center;
+ text-align: center;
 }
 
 option:active {
-  background-color: var(--theme-color);
+ background-color: var(--theme-color);
 }
 
 /*******************Columns****************/
 .column {
-  float: left;
-  width: fit-content;
-  overflow: hidden;
-  margin: 0 0px 0px 0px;
+ float: left;
+ width: fit-content;
+ overflow: hidden;
+ margin: 0 0px 0px 0px;
 }
 
 .io-column {
-  float: left;
-  width: fit-content;
-  margin-left: 0px;
-  margin-right: 0px;
-  overflow: hidden;
+ float: left;
+ width: fit-content;
+ margin-left: 0px;
+ margin-right: 0px;
+ overflow: hidden;
 }
 
 .io-column-jkInputs {
-  float: left;
-  width: fit-content;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 15px;
-  overflow: hidden;
+ float: left;
+ width: fit-content;
+ margin-left: 0px;
+ margin-right: 0px;
+ margin-top: 15px;
+ overflow: hidden;
 }
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+ content: '';
+ display: table;
+ clear: both;
 }
 
 .row {
-  display: table;
-  margin: auto;
-  box-shadow: var(--theme-color) 7px 7px 15px 0px;
-  padding: 5%;
-  width: fit-content;
-  min-width: 300;
-  min-width: min-content;
-  background-color: white;
+ display: table;
+ margin: auto;
+ box-shadow: var(--theme-color) 7px 7px 15px 0px;
+ padding: 5%;
+ width: fit-content;
+ min-width: 300;
+ min-width: min-content;
+ background-color: white;
+}
+
+.row-title {
+ color: black;
+ text-align: center;
+ width: 100%;
+ border-bottom: 2px solid var(--theme-color);
 }
 
 .image {
-  display: block;
-  width: 200px;
+ display: block;
+ width: 200px;
 }
 
 #dlatch {
-  display: block;
-  width: 300px;
+ display: block;
+ width: 300px;
 }
 
 #dff-image {
-  display: block;
-  width: 200px;
-  margin-top: -20px;
+ display: block;
+ width: 200px;
+ margin-top: -20px;
 }
 
 #jkff-image {
-  display: block;
-  width: 200px;
-  margin-top: -20px;
+ display: block;
+ width: 200px;
+ margin-top: -20px;
 }
 
 .tt_data {
-  display: inline-block;
-  margin-left: 10px;
-  margin-right: -4px;
-  border-right: 1px solid grey;
-  align-content: center;
-  text-align: center;
-  position: relative;
-  float: none;
-  font-size: 16px;
-  border: none;
-  background-color: transparent;
+ display: inline-block;
+ margin-left: 10px;
+ margin-right: -4px;
+ border-right: 1px solid grey;
+ align-content: center;
+ text-align: center;
+ position: relative;
+ float: none;
+ font-size: 16px;
+ border: none;
+ background-color: transparent;
 }
 
 td p {
-  text-align: center;
+ text-align: center;
 }
 
 td #colA {
-  background-color: transparent;
+ background-color: transparent;
 }
 
 td #colB {
-  background-color: transparent;
+ background-color: transparent;
 }
 
 td #colC {
-  background-color: transparent;
+ background-color: transparent;
 }
 
 #logic_options {
-  display: block;
-  margin: auto;
-  width: fit-content;
-  font-size: larger;
-  text-align: center;
-  font-weight: bold;
-  background-color: #b4acc7;
-  border: 1 solid #b4acc7;
-  border-radius: 10px;
-  box-shadow: #000000 2px 5px 5px;
-  margin-bottom: 20px;
+ display: block;
+ margin: auto;
+ width: fit-content;
+ font-size: larger;
+ text-align: center;
+ font-weight: bold;
+ background-color: #b4acc7;
+ border: 1 solid #b4acc7;
+ border-radius: 10px;
+ box-shadow: #000000 2px 5px 5px;
+ margin-bottom: 20px;
 }
 
 canvas {
-  display: inline;
-  margin-right: 0;
-  width: fit-content;
-  height: fit-content;
-  border: 3px solid var(--theme-color);
-  float: right;
-  position: relative;
+ display: inline;
+ margin-right: 0;
+ width: fit-content;
+ height: fit-content;
+ border: 3px solid var(--theme-color);
+ float: right;
+ position: relative;
 }
 
 .timeGrid {
-  display: flex;
-  align-content: center;
-  overflow-x: scroll;
-  max-width: 450px;
-  padding-bottom: 20px;
+ display: flex;
+ align-content: center;
+ overflow-x: scroll;
+ max-width: 450px;
+ padding-bottom: 20px;
 }
 
 .timeGrid p {
-  display: block;
-  margin: 0 5px 60px 0;
+ display: block;
+ margin: 0 5px 60px 0;
 }
 
 .timeGrid .left_labels {
-  display: inline-block;
-  margin-right: 10px;
-  margin-top: 30px;
+ display: inline-block;
+ margin-right: 10px;
+ margin-top: 30px;
 }
 
 .timeGrid .canv {
-  display: inline-block;
-  position: relative;
+ display: inline-block;
+ position: relative;
 }
 
 /*****form inputs****/
 .inputs {
-  border-top: 2px solid var(--theme-color);
-  border-bottom: 2px solid var(--theme-color);
-  border-radius: 10px;
-  display: block;
-  margin: auto;
-  padding: 10px 0 10px 0;
-  margin-top: 10px;
-  width: 400px;
-  text-align: center;
-  margin-bottom: 20px;
-  background-color: var(--theme-black);
-  color: white;
+ border-top: 2px solid var(--theme-color);
+ border-bottom: 2px solid var(--theme-color);
+ border-radius: 10px;
+ display: block;
+ margin: auto;
+ padding: 10px 0 10px 0;
+ margin-top: 10px;
+ width: 400px;
+ text-align: center;
+ margin-bottom: 20px;
+ background-color: var(--theme-black);
+ color: white;
 }
 
 .labels {
-  display: inline;
-  margin: auto;
-  font-weight: bold;
+ display: inline;
+ margin: auto;
+ font-weight: bold;
 }
 
 .h_inputs {
-  display: inline;
-  width: 100px;
+ display: inline;
+ width: 100px;
 }
 
 #no_inputs {
-  display: inline;
-  margin: auto;
-  position: static;
-  margin: 10px;
+ display: inline;
+ margin: auto;
+ position: static;
+ margin: 10px;
 }
 
 .out_btn {
-  display: block;
-  margin: auto;
-  margin-left: 25px;
-  font-size: larger;
-  font-weight: bold;
+ display: block;
+ margin: auto;
+ margin-left: 25px;
+ font-size: larger;
+ font-weight: bold;
 }
 
 #submit_btn {
-  display: inline;
-  background-color: var(--theme-color);
-  color: white;
-  font-size: 15px;
-  margin: 10px;
+ display: inline;
+ background-color: var(--theme-color);
+ color: white;
+ font-size: 15px;
+ margin: 10px;
 }
 
 #submit_btn:hover {
-  background-color: rgb(141, 141, 141);
-  color: var(--theme-color);
+ background-color: rgb(141, 141, 141);
+ color: var(--theme-color);
 }
 
 /*********************************/
 .login_sec {
-  display: block;
-  width: fit-content;
-  height: fit-content;
-  margin: auto;
+ display: block;
+ width: fit-content;
+ height: fit-content;
+ margin: auto;
 }
 
 .login_cont {
-  display: block;
-  width: fit-content;
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  background-color: var(--theme-black);
-  border-radius: 10px;
-  padding: 20px 30px;
-  box-shadow: var(--theme-color) 5px 5px 10px 0px;
+ display: block;
+ width: fit-content;
+ max-width: 300px;
+ margin: auto;
+ text-align: center;
+ background-color: var(--theme-black);
+ border-radius: 10px;
+ padding: 20px 30px;
+ box-shadow: var(--theme-color) 5px 5px 10px 0px;
 }
 
 .login_cont h1 {
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-  padding-bottom: 10px;
-  margin-bottom: 25px;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 4px 4px 8px -3px grey;
+ color: white;
+ font-size: 30px;
+ font-weight: bold;
+ padding-bottom: 10px;
+ margin-bottom: 25px;
+ width: 100%;
+ border-radius: 10px;
+ box-shadow: 4px 4px 8px -3px grey;
 }
 
 .login_form {
-  display: block;
-  width: fit-content;
+ display: block;
+ width: fit-content;
 }
 
 .login_cont .login_input {
-  display: block;
-  margin-bottom: 20px;
+ display: block;
+ margin-bottom: 20px;
 }
 
 .login_input label {
-  display: block;
-  text-align: left;
-  font-size: 20px;
-  font-weight: bold;
+ display: block;
+ text-align: left;
+ font-size: 20px;
+ font-weight: bold;
 }
 
 .login_input input {
-  display: block;
-  width: 100%;
-  margin-top: 5px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 2px solid grey;
-  background-color: rgb(199, 197, 197);
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-  transition: ease-in-out 0.5s;
+ display: block;
+ width: 100%;
+ margin-top: 5px;
+ padding: 10px;
+ border-radius: 5px;
+ border: 2px solid grey;
+ background-color: rgb(199, 197, 197);
+ color: rgb(0, 0, 0);
+ font-size: 16px;
+ transition: ease-in-out 0.5s;
 }
 
 .login_input input:focus {
-  outline: 2px solid var(--theme-color);
+ outline: 2px solid var(--theme-color);
 
-  transition: ease-in-out 0.2s;
+ transition: ease-in-out 0.2s;
 }
 
 .login_form button {
-  display: block;
-  margin: auto;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  background-color: var(--theme-color);
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  transition: ease-in-out 1.0s;
-  cursor: pointer;
+ display: block;
+ margin: auto;
+ margin-top: 20px;
+ padding: 10px 20px;
+ border-radius: 5px;
+ border: none;
+ background-color: var(--theme-color);
+ color: white;
+ font-size: 16px;
+ font-weight: bold;
+ transition: ease-in-out 1s;
+ cursor: pointer;
 }
 
 .login_form button:hover {
-  background-color: var(--theme-black);
-  box-shadow: var(--theme-color) 0px 0px 5px 5px;
-  transition: ease-out 0.3s;
+ background-color: var(--theme-black);
+ box-shadow: var(--theme-color) 0px 0px 5px 5px;
+ transition: ease-out 0.3s;
+}
+
+/* Decoder styles */
+.dec-body {
+ display: grid;
+ grid-template-columns: 1fr auto 1fr;
+ grid-template-rows: 1fr;
+ background-color: lightgrey;
+ padding: 20px 0;
+ margin: 20px 0;
+ height: fit-content;
+ width: fit-content;
+ gap: 10px;
+}
+
+.dec-body .dec-inputs,
+.dec-outputs {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 10px 0;
+}
+
+.dec-body .dec-image {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100%;
+}
+
+.dec-body .dec-image img {
+ image-rendering: optimizeQuality;
+ image-rendering: -moz-crisp-edges;
+ image-rendering: -webkit-optimize-contrast;
+ image-rendering: -o-crisp-edges;
+ image-rendering: pixelated;
+ -ms-interpolation-mode: nearest-neighbor;
+ width: auto;
+ height: 100%;
+}
+
+.dec-body .dec-inputs button {
+ display: block;
+ background-color: var(--theme-black);
+ color: white;
+ padding: 5px;
+}
+
+.dec-body .dec-inputs button:hover {
+ background-color: var(--theme-color);
+ color: white;
+ padding: 5px;
+ border: 2px solid var(--theme-black);
+ scale: 1.1;
+}
+
+.dec-body .dec-outputs button {
+ display: block;
+ background-color: var(--theme-color);
+ color: white;
+ padding: 5px;
+}
+
+.dec-body .dec-outputs button:hover {
+ background-color: var(--theme-black);
+ border: 2px solid var(--theme-color);
+ scale: 1.1;
 }
