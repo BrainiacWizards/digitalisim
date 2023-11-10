@@ -473,9 +473,80 @@ function bcdType () {
       } else {
         BCDinput.innerHTML = 0;
       }
+
+      bcd410Logic();
     };
 
   } );
 
   window.requestAnimationFrame( bcdType );
+}
+
+// BCD 4-10 decoder logic
+function bcd410Logic () {
+  // get input values
+  let a = BCDinputs[ 0 ].innerHTML;
+  let b = BCDinputs[ 1 ].innerHTML;
+  let c = BCDinputs[ 2 ].innerHTML;
+  let d = BCDinputs[ 3 ].innerHTML;
+
+  // logic
+  let x0 = 0, x1 = 0, x2 = 0, x3 = 0, x4 = 0, x5 = 0, x6 = 0, x7 = 0, x8 = 0, x9 = 0;
+
+  if ( a == 0 && b == 0 && c == 0 && d == 0 ) {
+    x0 = 1;
+  } else if ( a == 1 && b == 0 && c == 0 && d == 0 ) {
+    x1 = 1;
+  } else if ( a == 0 && b == 1 && c == 0 && d == 0 ) {
+    x2 = 1;
+  } else if ( a == 1 && b == 1 && c == 0 && d == 0 ) {
+    x3 = 1;
+  } else if ( a == 0 && b == 0 && c == 1 && d == 0 ) {
+    x4 = 1;
+  } else if ( a == 1 && b == 0 && c == 1 && d == 0 ) {
+    x5 = 1;
+  } else if ( a == 0 && b == 1 && c == 1 && d == 0 ) {
+    x6 = 1;
+  } else if ( a == 1 && b == 1 && c == 1 && d == 0 ) {
+    x7 = 1;
+  } else if ( a == 0 && b == 0 && c == 0 && d == 1 ) {
+    x8 = 1;
+  } else if ( a == 1 && b == 0 && c == 0 && d == 1 ) {
+    x9 = 1;
+  } else {
+    x0 = 0;
+    x1 = 0;
+    x2 = 0;
+    x3 = 0;
+    x4 = 0;
+    x5 = 0;
+    x6 = 0;
+    x7 = 0;
+    x8 = 0;
+    x9 = 0;
+  }
+
+
+  // display output values
+  BCDoutputs[ 0 ].innerHTML = x0;
+  BCDoutputs[ 1 ].innerHTML = x1;
+  BCDoutputs[ 2 ].innerHTML = x2;
+  BCDoutputs[ 3 ].innerHTML = x3;
+  BCDoutputs[ 4 ].innerHTML = x4;
+  BCDoutputs[ 5 ].innerHTML = x5;
+  BCDoutputs[ 6 ].innerHTML = x6;
+  BCDoutputs[ 7 ].innerHTML = x7;
+  BCDoutputs[ 8 ].innerHTML = x8;
+  BCDoutputs[ 9 ].innerHTML = x9;
+
+  // set color of only the active output
+  BCDoutputs.forEach( BCDoutput => {
+    if ( BCDoutput.innerHTML == 1 ) {
+      BCDoutput.style.background = "var(--theme-color";
+    } else {
+      BCDoutput.style.background = "var(--theme-black";
+    }
+
+  } );
+
 }
