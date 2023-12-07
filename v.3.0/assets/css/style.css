@@ -462,6 +462,9 @@ canvas {
 }
 
 /* Decoder styles */
+#bcd-decoders {
+ display: none;
+}
 .dec-body {
  display: grid;
  grid-template-columns: 1fr auto 1fr;
