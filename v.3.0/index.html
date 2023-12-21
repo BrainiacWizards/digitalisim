@@ -1,287 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/navbar.css" />
-    <link rel="stylesheet" href="./assets/css/tools.css" />
-    <link rel="stylesheet" href="../main.css" />
-    <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon" />
-    <title>DigitaliSim | Latches/FlipFlops</title>
-  </head>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/navbar.css" />
+  <link rel="stylesheet" href="./assets/css/tools.css" />
+  <link rel="stylesheet" href="../main.css" />
+  <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon" />
+  <title>DigitaliSim | Latches/FlipFlops</title>
+ </head>
 
-  <body>
-    <header>
-      <nav class="main-menu">
-        <ul class="nav-logo">
-          <li>
-            <a href="./index.html">
-              <img src="./assets/img/iot.png" alt="DigitaliSim Logo" />
-              <span class="nav-text">DigitaliSim</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="nav-items">
-          <li>
-            <a href="./index.html">
-              <i class="fa fa-home"></i>
-              <span class="nav-text">Home</span>
-            </a>
-          </li>
-          <li class="dropdown_nav">
-            <i class="fa fa-book"></i>
-            <select name="chapters" id="chapters">
-              <option value="default">
-                <span class="nav-text"> Chapters </span>
-              </option>
-              <option value="logic">
-                <span class="nav-text"> Logic Gates </span>
-              </option>
-              <option value="boolean">
-                <span class="nav-text">Truth Table</span>
-              </option>
-              <option value="adders">
-                <span class="nav-text"> Adders </span>
-              </option>
-              <option value="decoders">
-                <span class="nav-text"> Encoders </span>
-              </option>
-              <option value="multiplexers">
-                <span class="nav-text"> Multiplexers </span>
-              </option>
-              <option value="latches">
-                <span class="nav-text"> Flip-Flops </span>
-              </option>
-              <option value="counters">
-                <span class="nav-text"> Counters </span>
-              </option>
-            </select>
-          </li>
-          <li>
-            <a href="./about.html">
-              <i class="fa fa-circle-info"></i>
-              <span class="nav-text"> About </span>
-            </a>
-          </li>
-          <li>
-            <a href="./help.html">
-              <i class="fa fa-circle-question"></i>
-              <span class="nav-text"> Help </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="tools_sidebar">
-        <div class="tools_header">
-          <i class="fa fa-list"></i>
-          <select
-            class="tools_sidebar_content"
-            name="tools-option"
-            id="tool-option"
-          >
-            <option value="default">Select Tool</option>
-            <option value="logic">Logic Gates</option>
-            <option value="converter">Binary Converter</option>
-            <option value="calculator">Binary Calculator</option>
-          </select>
-        </div>
-        <div class="tools_content">
-          <div class="tools_item tools_conv">
-            <h1>Binary Converter</h1>
-            <form class="tools_conv_form">
-              <div class="conv_input_group">
-                <input type="text" name="binary" id="conv_from" />
-                <select name="options" id="conv_options_from">
-                  <option value="bin">Binary</option>
-                  <option value="dec">Decimal</option>
-                  <option value="hex">Hex</option>
-                </select>
-              </div>
-
-              <div class="conv_input_group">
-                <input type="text" name="decimal" id="conv_to" />
-                <select name="options" id="conv_options_to">
-                  <option value="bin">Binary</option>
-                  <option value="dec">Decimal</option>
-                  <option value="hex">Hex</option>
-                </select>
-              </div>
-
-              <button class="form_button" type="submit" id="convert">
-                Convert
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <container class="bod">
-      <select name="options" id="logic_options">
-        <option value="default">Select Option</option>
-        <option value="ah-sr">Active-high SR Latch</option>
-        <option value="al-sr">Active-low SR Latch</option>
-        <option value="d-latch">Gated D Latch</option>
-        <option value="d-ff">D Flip-Flop</option>
-        <option value="jk-ff">JK Flip-Flop</option>
+ <body>
+  <header>
+   <nav class="main-menu">
+    <ul class="nav-logo">
+     <li>
+      <a href="./index.html">
+       <img src="./assets/img/iot.png" alt="DigitaliSim Logo" />
+       <span class="nav-text">DigitaliSim</span>
+      </a>
+     </li>
+    </ul>
+    <ul class="nav-items">
+     <li>
+      <a href="./index.html">
+       <i class="fa fa-home"></i>
+       <span class="nav-text">Home</span>
+      </a>
+     </li>
+     <li class="dropdown_nav">
+      <i class="fa fa-book"></i>
+      <select name="chapters" id="chapters">
+       <option value="default">
+        <span class="nav-text"> Chapters </span>
+       </option>
+       <option value="logic">
+        <span class="nav-text"> Logic Gates </span>
+       </option>
+       <option value="boolean">
+        <span class="nav-text">Truth Table</span>
+       </option>
+       <option value="adders">
+        <span class="nav-text"> Adders </span>
+       </option>
+       <option value="decoders">
+        <span class="nav-text"> Encoders </span>
+       </option>
+       <option value="multiplexers">
+        <span class="nav-text"> Multiplexers </span>
+       </option>
+       <option value="latches">
+        <span class="nav-text"> Flip-Flops </span>
+       </option>
+       <option value="counters">
+        <span class="nav-text"> Counters </span>
+       </option>
       </select>
+     </li>
+     <li>
+      <a href="./about.html">
+       <i class="fa fa-circle-info"></i>
+       <span class="nav-text"> About </span>
+      </a>
+     </li>
+     <li>
+      <a href="./help.html">
+       <i class="fa fa-circle-question"></i>
+       <span class="nav-text"> Help </span>
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div class="tools_sidebar">
+    <div class="tools_header">
+     <i class="fa fa-list"></i>
+     <select class="tools_sidebar_content" name="tools-option" id="tool-option">
+      <option value="default">Select Tool</option>
+      <option value="logic">Logic Gates</option>
+      <option value="converter">Binary Converter</option>
+      <option value="calculator">Binary Calculator</option>
+     </select>
+    </div>
+    <div class="tools_content">
+     <div class="tools_item tools_conv">
+      <h1>Binary Converter</h1>
+      <form class="tools_conv_form">
+       <div class="conv_input_group">
+        <input type="text" name="binary" id="conv_from" />
+        <select name="options" id="conv_options_from">
+         <option value="bin">Binary</option>
+         <option value="dec">Decimal</option>
+         <option value="hex">Hex</option>
+        </select>
+       </div>
 
-      <div class="row" id="active-high-sr">
-        <h2 id="row-title">Active_High SR-Latch</h2>
-        <div class="io-column">
-          <button id="s" class="button_input">S</button>
-          <button id="r" class="button_input">R</button>
-        </div>
-        <div class="column">
-          <img
-            class="image"
-            src="./assets/img/active-high-sr.png"
-            alt="SR Latch"
-            style="margin-top: 10px"
-          />
-        </div>
-        <div class="io-column">
-          <button id="q" class="button_output">Q</button>
-          <button id="qNOT" class="button_output">Q`</button>
-        </div>
+       <div class="conv_input_group">
+        <input type="text" name="decimal" id="conv_to" />
+        <select name="options" id="conv_options_to">
+         <option value="bin">Binary</option>
+         <option value="dec">Decimal</option>
+         <option value="hex">Hex</option>
+        </select>
+       </div>
+
+       <button class="form_button" type="submit" id="convert"> Convert </button>
+      </form>
+     </div>
+    </div>
+   </div>
+  </header>
+
+  <container class="bod">
+   <select name="options" id="logic_options">
+    <option value="default">Select Option</option>
+    <option value="ah-sr">Active-high SR Latch</option>
+    <option value="al-sr">Active-low SR Latch</option>
+    <option value="d-latch">Gated D Latch</option>
+    <option value="d-ff">D Flip-Flop</option>
+    <option value="jk-ff">JK Flip-Flop</option>
+   </select>
+
+   <div class="row" id="active-high-sr">
+    <h2 id="row-title">Active_High SR-Latch</h2>
+    <div class="io-column">
+     <button id="s" class="button_input">S</button>
+     <button id="r" class="button_input">R</button>
+    </div>
+    <div class="column">
+     <img
+      class="image"
+      src="./assets/img/active-high-sr.png"
+      alt="SR Latch"
+      style="margin-top: 10px"
+     />
+    </div>
+    <div class="io-column">
+     <button id="q" class="button_output">Q</button>
+     <button id="qNOT" class="button_output">Q`</button>
+    </div>
+   </div>
+
+   <div class="row" id="active-low-sr">
+    <h2 id="row_title">Active_Low SR-Latch</h2>
+    <div class="io-column">
+     <button id="ls" class="button_input">S</button>
+     <button id="lr" class="button_input">R</button>
+    </div>
+    <div class="column">
+     <img
+      class="image"
+      src="./assets/img/active-low-sr.png"
+      alt="Active low SR Latch"
+     />
+    </div>
+    <div class="io-column">
+     <button id="lq" class="button_output">Q</button>
+     <button id="lqNOT" class="button_output">Q`</button>
+    </div>
+   </div>
+
+   <div class="row" id="gated-d-latch">
+    <h2 id="row_title">Gated D-Latch</h2>
+    <div class="io-column">
+     <button id="ds" class="button-g-input">S</button>
+     <button id="den" class="button-g-input">D</button>
+    </div>
+    <div class="column">
+     <img
+      id="dlatch"
+      src="./assets/img/gated-d-latch.png"
+      alt="Gated D Latch"
+     />
+    </div>
+    <div class="io-column">
+     <button id="dq" class="button-g-output">Q</button>
+     <button id="dqNOT" class="button-g-output">Q`</button>
+    </div>
+   </div>
+
+   <div class="row" id="d-flip-flop">
+    <h2 id="row_title">D Flip-Flop</h2>
+    <div class="io-column">
+     <button id="dFFs" class="button-g-input">S</button>
+     <button id="dFFen" class="clock-btn">D</button>
+    </div>
+    <div class="column">
+     <img id="dff-image" src="./assets/img/d-flip-flop.png" alt="D Flip-Flop" />
+    </div>
+    <div class="io-column">
+     <button id="dFFq" class="button-g-output">Q</button>
+     <button id="dFFqNOT" class="button-g-output">Q`</button>
+    </div>
+    <div class="bottom_btns">
+     <button class="startBtn" id="startDFF">Start/Stop</button>
+     <select name="edgeTrig" id="edge">
+      <option value="up">Positive-edge</option>
+      <option value="down">Negative-edge</option>
+     </select>
+    </div>
+   </div>
+
+   <div class="row" id="jk_flip_flop">
+    <h2 id="row_title">JK Flip-Flop</h2>
+    <div class="io-column-jkInputs">
+     <button id="JKFFj" class="button-jk-input">J</button>
+     <button id="JKFFclk" class="clock-jkbtn">clk</button>
+     <button id="JKFFk" class="button-jk-input">K</button>
+    </div>
+    <div class="column">
+     <img
+      id="jkff-image"
+      src="./assets/img/jk-flip-flop.png"
+      alt="JK Flip-Flop"
+      style="margin-top: -7px"
+     />
+    </div>
+    <div class="io-column">
+     <button id="JKFFq" class="button-g-output">Q</button>
+     <button id="JKFFnotq" class="button-g-output">Q`</button>
+    </div>
+    <div class="bottom_btns">
+     <button class="startBtn" id="startJKFF">Start/Stop</button>
+
+     <select name="edgeTrig" id="edge">
+      <option value="up">Positive-edge</option>
+      <option value="down">Negative-edge</option>
+     </select>
+    </div>
+   </div>
+
+   <div class="row" id="bcd-decoders">
+    <h2 class="row-title">BCD Decoder</h2>
+    <div class="dec-configs">
+     <select name="type-of-bcd-dec" id="type-of-bcd-dec">
+      <option value="default">Select BCD Decoder type</option>
+      <option value="2-4">2-4 BCD Decoder</option>
+      <option value="3-8">3-8 BCD Decoder</option>
+      <option value="4-7">4-7 BCD Decoder</option>
+      <option value="4-10">4-10 BCD Decoder</option>
+     </select>
+
+     <div class="dec-body">
+      <div class="dec-inputs">
+       <button class="bcd-dec-inputs">A</button>
+       <button class="bcd-dec-inputs">B</button>
+       <button class="bcd-dec-inputs">C</button>
+       <button class="bcd-dec-inputs">D</button>
       </div>
-
-      <div class="row" id="active-low-sr">
-        <h2 id="row_title">Active_Low SR-Latch</h2>
-        <div class="io-column">
-          <button id="ls" class="button_input">S</button>
-          <button id="lr" class="button_input">R</button>
-        </div>
-        <div class="column">
-          <img
-            class="image"
-            src="./assets/img/active-low-sr.png"
-            alt="Active low SR Latch"
-          />
-        </div>
-        <div class="io-column">
-          <button id="lq" class="button_output">Q</button>
-          <button id="lqNOT" class="button_output">Q`</button>
-        </div>
+      <div class="dec-image">
+       <img
+        id="bcd-dec-image"
+        src="./assets/img/bcd-4-10.PNG"
+        alt="BCD Decoder"
+       />
       </div>
-
-      <div class="row" id="gated-d-latch">
-        <h2 id="row_title">Gated D-Latch</h2>
-        <div class="io-column">
-          <button id="ds" class="button-g-input">S</button>
-          <button id="den" class="button-g-input">D</button>
-        </div>
-        <div class="column">
-          <img
-            id="dlatch"
-            src="./assets/img/gated-d-latch.png"
-            alt="Gated D Latch"
-          />
-        </div>
-        <div class="io-column">
-          <button id="dq" class="button-g-output">Q</button>
-          <button id="dqNOT" class="button-g-output">Q`</button>
-        </div>
+      <div class="dec-outputs">
+       <button class="bcd-dec-outputs">Y0</button>
+       <button class="bcd-dec-outputs">Y1</button>
+       <button class="bcd-dec-outputs">Y2</button>
+       <button class="bcd-dec-outputs">Y3</button>
+       <button class="bcd-dec-outputs">Y4</button>
+       <button class="bcd-dec-outputs">Y5</button>
+       <button class="bcd-dec-outputs">Y6</button>
+       <button class="bcd-dec-outputs">Y7</button>
+       <button class="bcd-dec-outputs">Y8</button>
+       <button class="bcd-dec-outputs">Y9</button>
       </div>
+     </div>
+    </div>
+   </div>
+  </container>
 
-      <div class="row" id="d-flip-flop">
-        <h2 id="row_title">D Flip-Flop</h2>
-        <div class="io-column">
-          <button id="dFFs" class="button-g-input">S</button>
-          <button id="dFFen" class="clock-btn">D</button>
-        </div>
-        <div class="column">
-          <img
-            id="dff-image"
-            src="./assets/img/d-flip-flop.png"
-            alt="D Flip-Flop"
-          />
-        </div>
-        <div class="io-column">
-          <button id="dFFq" class="button-g-output">Q</button>
-          <button id="dFFqNOT" class="button-g-output">Q`</button>
-        </div>
-        <div class="bottom_btns">
-          <button class="startBtn" id="startDFF">Start/Stop</button>
-          <select name="edgeTrig" id="edge">
-            <option value="up">Positive-edge</option>
-            <option value="down">Negative-edge</option>
-          </select>
-        </div>
-      </div>
+  <footer class="footer">
+   <div class="themePicker">
+    <form class="themeForm">
+     <fieldset>
+      <legend class="hidden">Pick theme:</legend>
+      <button id="themeButton">
+       <i class="fa fa-palette theme-icon"></i>
+      </button>
+      <label class="hidden" for="bp">Purple</label>
+      <input type="radio" name="theme" id="purple" checked />
+      <label class="hidden" for="bg">Green</label>
+      <input type="radio" name="theme" id="green" />
+      <label class="hidden" for="gp">Pink</label>
+      <input type="radio" name="theme" id="pink" />
+      <label class="hidden" for="gg">Blue</label>
+      <input type="radio" name="theme" id="blue" />
+     </fieldset>
+    </form>
+   </div>
+   <div class="footer-content">
+    <p>Copyright &copy; 2023</p>
+   </div>
+  </footer>
 
-      <div class="row" id="jk_flip_flop">
-        <h2 id="row_title">JK Flip-Flop</h2>
-        <div class="io-column-jkInputs">
-          <button id="JKFFj" class="button-jk-input">J</button>
-          <button id="JKFFclk" class="clock-jkbtn">clk</button>
-          <button id="JKFFk" class="button-jk-input">K</button>
-        </div>
-        <div class="column">
-          <img
-            id="jkff-image"
-            src="./assets/img/jk-flip-flop.png"
-            alt="JK Flip-Flop"
-            style="margin-top: -7px"
-          />
-        </div>
-        <div class="io-column">
-          <button id="JKFFq" class="button-g-output">Q</button>
-          <button id="JKFFnotq" class="button-g-output">Q`</button>
-        </div>
-        <div class="bottom_btns">
-          <button class="startBtn" id="startJKFF">Start/Stop</button>
+  <!-- page specific js -->
+  <script src="./assets/js/ch7.js"></script>
 
-          <select name="edgeTrig" id="edge">
-            <option value="up">Positive-edge</option>
-            <option value="down">Negative-edge</option>
-          </select>
-        </div>
-      </div>
-    </container>
+  <!-- to be included on every page -->
+  <script src="../main.js"></script>
+  <script src="./assets/js/tools.js"></script>
 
-    <footer class="footer">
-      <div class="themePicker">
-        <form class="themeForm">
-          <fieldset>
-            <legend class="hidden">Pick theme:</legend>
-            <button id="themeButton">
-              <i class="fa fa-palette theme-icon"></i>
-            </button>
-            <label class="hidden" for="bp">Purple</label>
-            <input type="radio" name="theme" id="purple" checked />
-            <label class="hidden" for="bg">Green</label>
-            <input type="radio" name="theme" id="green" />
-            <label class="hidden" for="gp">Pink</label>
-            <input type="radio" name="theme" id="pink" />
-            <label class="hidden" for="gg">Blue</label>
-            <input type="radio" name="theme" id="blue" />
-          </fieldset>
-        </form>
-      </div>
-      <div class="footer-content">
-        <p>Copyright &copy; 2023</p>
-      </div>
-    </footer>
-
-    <!-- page specific js -->
-    <script src="./assets/js/ch7.js"></script>
-
-    <!-- to be included on every page -->
-    <script src="../main.js"></script>
-    <script src="./assets/js/tools.js"></script>
-
-    <!-- Cloudflare Web Analytics -->
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "cb2c44b3b0f1449b9a62490daa7124e6"}'
-    ></script>
-    <!-- End Cloudflare Web Analytics -->
-    <script
-      src="https://kit.fontawesome.com/cda065bf16.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <!-- Cloudflare Web Analytics -->
+  <script
+   defer
+   src="https://static.cloudflareinsights.com/beacon.min.js"
+   data-cf-beacon='{"token": "cb2c44b3b0f1449b9a62490daa7124e6"}'
+  ></script>
+  <!-- End Cloudflare Web Analytics -->
+  <script
+   src="https://kit.fontawesome.com/cda065bf16.js"
+   crossorigin="anonymous"
+  ></script>
+ </body>
 </html>

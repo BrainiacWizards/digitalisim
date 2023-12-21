@@ -12,3 +12,5 @@ All changes will be committed to the main branch.
 The Site is only optimized for desktop, not yet for mobile.
 For testing, a Github page has been set up.
 I would advise you to register for the GitHub Student Pack to have access to GitHub Copilot.
+
+url: https://digitalisim.pages.dev/

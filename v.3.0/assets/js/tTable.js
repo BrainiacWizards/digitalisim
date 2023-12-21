@@ -1382,6 +1382,7 @@ export function resetTable () {
             <p>output</p>
           </td>
         </tr>`;
+        </tr > `;
 
     //reset boalean expression variables
     SOP_StringArray = [];
@@ -1414,6 +1415,12 @@ export function truthTable () {
         genInC = [ 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1 ];
         genInD = [ 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 ];
     }
+
+    // clear bin expresion arrays
+    SOP_StringArray = [];
+    SOP_BinArray = [];
+    POS_StringArray = [];
+    POS_BinArray = [];
 
     //generate the output array [main output generator logic]
     for ( let i = 0; i < genInA.length; i++ ) {
@@ -1728,7 +1735,7 @@ function inputChecker () {
 function domOperation () {
     for ( let i = 0; i < genOut.length; i++ ) {
         htmlContent += `
-        <tr class="tt_row" id="row${ i + 1 }">
+        < tr class="tt_row" id = "row${ i + 1 }" >
           <td class="tt_data colA">
             ${ genInA[ i ] }
           </td>
@@ -1744,7 +1751,7 @@ function domOperation () {
           <td class="tt_data colE">
           ${ genOut[ i ] }
           </td>
-        </tr>
+        </tr >
         `;
     }
-}
+};
