@@ -7,6 +7,10 @@
   <link rel="stylesheet" href=".\assets\css\navbar.css" />
   <link rel="stylesheet" href=".\assets\css\tTable.css" />
   <link rel="stylesheet" href="./assets/css/tools.css" />
+  <link
+   rel="stylesheet"
+   href="./assets/css/responsive-css/mobile-responsive.css"
+  />
   <link rel="stylesheet" href="../main.css" />
   <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon" />
   <title>DigitaliSim | Truth-table Generator</title>
@@ -23,7 +27,7 @@
         src="./assets/img/iot.png"
         alt="DigitaliSim Logo"
        />
-       <span class="nav-text">DigitaliSim</span>
+       <span class="nav-text nav-logo-text">DigitaliSim</span>
       </a>
      </li>
     </ul>
@@ -42,6 +46,8 @@
         <a href="./truthTable.html">Truth-Table</a>
         <a href="./adders.html">Adders</a>
         <a href="./counters.html">Counters</a>
+        <a href="./flipflops.html">FlipFlops</a>
+        <a href="./decoders.html">Decoders</a>
        </div>
       </div>
      </li>
@@ -767,7 +773,7 @@
      </div>
     </container>
 
-    <container class="t_container">
+    <container class="t_container exp_container">
      <h2>Boolean Expression</h2>
 
      <h3 class="exp_heading">SOP Expression</h3>
@@ -784,48 +790,6 @@
      </div>
     </container>
    </section>
-
-   <container class="dis_container">
-    <h1 class="title_h">Instructions</h1>
-    <p>1. 1st choose the correct combinational logic above</p>
-    <p>
-     2. columns are from A-D and rows are 1-8, for example if you want to
-     chooose a certain output, say the 1st logic gate is B1
-    </p>
-    <p>
-     3. 1st Choose the inputs and logic gate on row 1, it you require extra
-     Gates , you may utilise row 2,
-    </p>
-
-    <p></p>
-    <p>
-     Note that: the outputs fo the second row are generate after that of 1st
-     row, so it is adviced that you click generate twice, to make sure your
-     answer is correct
-    </p>
-    <p>
-     5. Select the number of Input your combinational Logic Circuit has,
-     (A,B,C,D). FOR NOW THE ALGORITHM CAN ONLY TAKE 3 INPUTS
-    </p>
-    <p>6. Then click generate!</p>
-    <p>
-     7. If a column title is red, that means you have not selected the input
-     variable
-    </p>
-    <p>8. ignore empty cells in the Truth-table</p>
-    <p>9. R3o represents the output of row 3, same thing as for others</p>
-    <p>10. if you want auto generated inputs, click "auto generate"</p>
-    <p>Note: all input fields will be cleared</p>
-    <p>
-     11. if a certain variable is no filled in, it will be auto generated.
-    </p>
-    <p>
-     12. !! A is the master input, if you are not auto generating, then it must
-     be filled in.
-    </p>
-
-    <h3>Suggestions window will be avaiable soon</h3>
-   </container>
   </container>
 
   <footer class="footer">

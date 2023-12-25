@@ -23,7 +23,7 @@ html {
 }
 
 :root:has(#purple:checked) {
- --theme-color: rgb(94, 4, 212);
+ --theme-color: rgb(144, 0, 201);
 }
 
 :root:has(#pink:checked) {
@@ -35,8 +35,8 @@ html {
 }
 
 .light {
-  --theme-black: rgb(216, 216, 216);
-  --font-color: black;
+ --theme-black: rgb(216, 216, 216);
+ --font-color: black;
 }
 
 .main_body {
