@@ -39,17 +39,17 @@ This project uses the MIT license. See the LICENSE file for more details.
 
 ## Credits
 
-- Name: [Manelisi Mpotulo](@mmpotulo28)
-- Email: [mpotulom28@gmail.com](mpotulom28@gmail.com)
-- GitHub: [mmpotulo28](https//github.com/mmpotulo28)
+- Name: [Manelisi Mpotulo](https://github.com/mmpotulo28)
+- Email: [mpotulom28@gmail.com](mailto:mpotulom28@gmail.com)
+- GitHub: [mmpotulo28](https://github.com/mmpotulo28)
 - Instagram: [@dj_mnesh](https://www.instagram.com/dj_mnesh/)
 - Portfolio: [Click Here](https://manelisim.pages.com)
-- LinkedIn: [Profile]()
+- LinkedIn: [Profile](https://linkedin/in/mmpotulo)
 
 > Feel free to contact me for any questions or contributions.
 
-- Name: [Palesa Motaung](@Helipterum)
+- Name: [Palesa Motaung](https://github.com/Helipterum)
 - Email: `comming soon`
-- GitHub: [Helipterum](https//github.com/Helipterum)
+- GitHub: [Helipterum](https://github.com/Helipterum)
 - Instagram: `comming soon`
 - Portfolio: `comming soon`
