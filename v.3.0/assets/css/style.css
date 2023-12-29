@@ -316,8 +316,10 @@ canvas {
  width: fit-content;
  height: fit-content;
  border: 3px solid var(--theme-color);
+ border-radius: 10px;
  float: right;
  position: relative;
+ background-color: #000000;
 }
 
 .timeGrid {

@@ -27,10 +27,14 @@ export function drawCanvas ( in1, in2, in3, in4, in5 ) {
     let arr4 = in4;
 
     //draw genout array
+<<<<<<< Updated upstream
+    draw( arr, 20, 20 );
+=======
     if ( arr != undefined || arr != '' ) {
-        draw( arr, 20, 20, 0 );
+        draw( arr, 20, 20, 10 );
     }
 
+>>>>>>> Stashed changes
 
     //draw for 1st array
     if ( arr1 != undefined || arr1 != '' ) {
@@ -57,7 +61,11 @@ export function drawCanvas ( in1, in2, in3, in4, in5 ) {
     }
 }
 
-function draw ( arr, x, yPos, count ) {
+<<<<<<< Updated upstream
+function draw ( arr, x, yPos ) {
+=======
+function draw ( arr, x, yPos, count = 0 ) {
+>>>>>>> Stashed changes
 
     for ( let i = 0; i < arr.length; i++ ) {
         if ( arr[ i ] == 1 ) { //draw highs
@@ -81,17 +89,15 @@ function draw ( arr, x, yPos, count ) {
             if ( arr[ i + 1 ] == 1 ) {
                 ctx.lineTo( x + Ampl, canvas.height - yPos );
             }
-        } else {
-            ctx.moveTo( 0, intercept );
-            ctx.lineTo( 0, intercept );
         }
 
-        // if ( count == 1 ) ctx.strokeStyle = "lightgrey";
-        if ( count == 2 ) ctx.strokeStyle = "red";
-        if ( count == 3 ) ctx.strokeStyle = "blue";
-        if ( count == 4 ) ctx.strokeStyle = "green";
-        if ( count == 5 ) ctx.strokeStyle = "yellow";
+<<<<<<< Updated upstream
+        ctx.strokeStyle = "lightgrey";
+=======
+        if ( count == 0 ) { ctx.strokeStyle = "grey"; }
+        // else if ( count == 1 ) { ctx.strokeStyle = "lightgrey"; }
 
+>>>>>>> Stashed changes
         ctx.stroke();
 
         //shift horizontaly
