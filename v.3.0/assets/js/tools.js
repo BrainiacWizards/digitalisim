@@ -1,6 +1,12 @@
+// get current html page form url
+const url = window.location.href;
+//get html page name
+const page = url.split( '/' ).pop();
+
+//check if user is logged in
 if ( !sessionStorage.getItem( 'loggedIn' ) ) {
   //redirect to main page
-  window.location.href = "./login.html";
+  window.location.href = `./login.html?rdf=${ page }`;
 }
 
 //check which tool is selected

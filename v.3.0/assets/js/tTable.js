@@ -1,9 +1,17 @@
 import * as gates from './gates.js';
 import * as canvas from './canvas.js';
+
+// get current html page form url
+const url = window.location.href;
+//get html page name
+const page = url.split( '/' ).pop();
+
+//check if user is logged in
 if ( !sessionStorage.getItem( 'loggedIn' ) ) {
     //redirect to main page
-    window.location.href = "./login.html";
+    window.location.href = `./login.html?rdf=${ page }`;
 }
+
 //get variable from index.html
 //selctor inputs
 //row 1
