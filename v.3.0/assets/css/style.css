@@ -4,23 +4,48 @@ html {
 }
 
 body {
-  display: block;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: rgb(68, 68, 68);
-  overflow: auto;
-  color:var(--font-color);
+ display: block;
+ margin: 0;
+ padding: 0;
+ height: 100%;
+ background-color: rgb(68, 68, 68);
+ overflow: auto;
+ color: var(--font-color);
 }
 
 .bod {
- display: block;
- margin-top: 30px;
- margin-bottom: 100px;
- margin-left: 100px;
- position: static;
+ display: flex;
+ width: 85%;
+ margin: auto;
+ margin-top: 20px;
+ margin-bottom: 70px;
+ justify-content: center;
+ align-items: center;
+ align-self: center;
+ align-content: center;
+ padding: 20px;
+ height: fit-content;
+ float: none;
  min-width: 500px;
- float: left;
+ overflow: hidden;
+}
+
+.bhody {
+ display: flex;
+ flex-direction: column;
+ width: 85%;
+ margin: auto;
+ margin-top: 20px;
+ margin-bottom: 70px;
+ justify-content: center;
+ align-items: center;
+ align-self: center;
+ align-content: center;
+ padding: 20px;
+ height: fit-content;
+ float: none;
+ min-width: 500px;
+ overflow: hidden;
 }
 
 a {
@@ -39,47 +64,47 @@ select {
 }
 
 .button_input {
-  background-color: var(--theme-black);
-  border: none;
-  color:var(--font-color);
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 4px 2px 75px 0px;
-  cursor: pointer;
-  width: fit-content;
+ background-color: var(--theme-black);
+ border: none;
+ color: var(--font-color);
+ padding: 10px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ font-size: 16px;
+ margin: 4px 2px 75px 0px;
+ cursor: pointer;
+ width: fit-content;
 }
 
 .button_output {
-  background-color: var(--theme-color);
-  /* Green */
-  border: none;
-  color:var(--font-color);
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 20px 2px 50px 0px;
-  cursor: pointer;
-  width: fit-content;
+ background-color: var(--theme-color);
+ /* Green */
+ border: none;
+ color: var(--font-color);
+ padding: 10px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ font-size: 16px;
+ margin: 20px 2px 50px 0px;
+ cursor: pointer;
+ width: fit-content;
 }
 
 .button-g-input {
-  background-color: var(--theme-black);
-  /* Green */
-  border: none;
-  color:var(--font-color);
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 0px 2px 30px 0px;
-  cursor: pointer;
-  width: fit-content;
+ background-color: var(--theme-black);
+ /* Green */
+ border: none;
+ color: var(--font-color);
+ padding: 10px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ font-size: 16px;
+ margin: 0px 2px 30px 0px;
+ cursor: pointer;
+ width: fit-content;
 }
 
 .clock-btn {
@@ -98,18 +123,18 @@ select {
 }
 
 .button-g-output {
-  background-color: var(--theme-color);
-  /* Green */
-  border: none;
-  color:var(--font-color);
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 20px 2px 50px 0px;
-  cursor: pointer;
-  width: fit-content;
+ background-color: var(--theme-color);
+ /* Green */
+ border: none;
+ color: var(--font-color);
+ padding: 10px 10px;
+ text-align: center;
+ text-decoration: none;
+ display: block;
+ font-size: 16px;
+ margin: 20px 2px 50px 0px;
+ cursor: pointer;
+ width: fit-content;
 }
 
 .bottom_btns {
@@ -397,14 +422,14 @@ canvas {
 }
 
 .login_cont h1 {
-  color:var(--font-color);
-  font-size: 30px;
-  font-weight: bold;
-  padding-bottom: 10px;
-  margin-bottom: 25px;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 4px 4px 8px -3px grey;
+ color: var(--font-color);
+ font-size: 30px;
+ font-weight: bold;
+ padding-bottom: 10px;
+ margin-bottom: 25px;
+ width: 100%;
+ border-radius: 10px;
+ box-shadow: 4px 4px 8px -3px grey;
 }
 
 .login_form {
@@ -444,18 +469,18 @@ canvas {
 }
 
 .login_form button {
-  display: block;
-  margin: auto;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  background-color: var(--theme-color);
-  color:var(--font-color);
-  font-size: 16px;
-  font-weight: bold;
-  transition: ease-in-out 1.0s;
-  cursor: pointer;
+ display: block;
+ margin: auto;
+ margin-top: 20px;
+ padding: 10px 20px;
+ border-radius: 5px;
+ border: none;
+ background-color: var(--theme-color);
+ color: var(--font-color);
+ font-size: 16px;
+ font-weight: bold;
+ transition: ease-in-out 1s;
+ cursor: pointer;
 }
 
 .login_form button:hover {

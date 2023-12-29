@@ -1,152 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href=".\assets\css\style.css" />
-    <link rel="stylesheet" href=".\assets\css\navbar.css" />
-    <link rel="stylesheet" href=".\assets\css\tTable.css" />
-    <link rel="stylesheet" href="./assets/css/tools.css" />
-    <link rel="stylesheet" href="../main.css" />
-    <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon" />
-    <title>DigitaliSim | Login/Register</title>
-  </head>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href=".\assets\css\style.css" />
+  <link rel="stylesheet" href=".\assets\css\navbar.css" />
+  <link rel="stylesheet" href=".\assets\css\tTable.css" />
+  <link rel="stylesheet" href="./assets/css/tools.css" />
+  <link rel="stylesheet" href="../main.css" />
+  <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon" />
+  <title>DigitaliSim | Login/Register</title>
+ </head>
 
-  <body>
-    <header>
-      <nav class="main-menu">
-        <ul class="nav-logo">
-          <li>
-            <a href="./index.html">
-              <img src="./assets/img/iot.png" alt="DigitaliSim Logo" />
-              <span class="nav-text">DigitaliSim</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="nav-items">
-          <li>
-            <a href="./index.html">
-              <i class="fa fa-home"></i>
-              <span class="nav-text">Home</span>
-            </a>
-          </li>
-          <li class="dropdown_nav">
-            <i class="fa fa-book"></i>
-            <select name="chapters" id="chapters">
-              <option value="default">
-                <span class="nav-text"> Chapters </span>
-              </option>
-              <option value="logic">
-                <span class="nav-text"> Logic Gates </span>
-              </option>
-              <option value="boolean">
-                <span class="nav-text">Truth Table</span>
-              </option>
-              <option value="adders">
-                <span class="nav-text"> Adders </span>
-              </option>
-              <option value="decoders">
-                <span class="nav-text"> Encoders </span>
-              </option>
-              <option value="multiplexers">
-                <span class="nav-text"> Multiplexers </span>
-              </option>
-              <option value="latches">
-                <span class="nav-text"> Flip-Flops </span>
-              </option>
-              <option value="counters">
-                <span class="nav-text"> Counters </span>
-              </option>
-            </select>
-          </li>
-          <li>
-            <a href="./about.html">
-              <i class="fa fa-circle-info"></i>
-              <span class="nav-text"> About </span>
-            </a>
-          </li>
-          <li>
-            <a href="./help.html">
-              <i class="fa fa-circle-question"></i>
-              <span class="nav-text"> Help </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+ <body>
+  <header>
+   <nav class="main-menu">
+    <ul class="nav-logo">
+     <li>
+      <a href="./index.html">
+       <img
+        class="nav-logo-img"
+        src="./assets/img/iot.png"
+        alt="DigitaliSim Logo"
+       />
+       <span class="nav-text nav-logo-text">DigitaliSim</span>
+      </a>
+     </li>
+    </ul>
 
-    <container class="bod">
-      <section class="login_sec">
-        <div class="login_cont">
-          <h1>Login</h1>
-          <p id="login_status"></p>
-          <form class="login_form">
-            <div class="login_input">
-              <label for="username">Username</label>
-              <input
-                type="text"
-                name="username"
-                id="login_user"
-                placeholder="Enter your username"
-                required
-              />
-            </div>
-            <div class="login_input">
-              <label for="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                id="login_pass"
-                placeholder="Enter your password"
-                required
-              />
-            </div>
-
-            <button type="submit" class="login_btn">Login</button>
-          </form>
-
-          <p>Don't have an account? <a href="./register.html">Register</a></p>
-        </div>
-      </section>
-    </container>
-
-    <footer class="footer">
-      <div class="themePicker">
-        <form class="themeForm">
-          <fieldset>
-            <legend class="hidden">Pick theme:</legend>
-            <button id="themeButton">
-              <i class="fa fa-palette theme-icon"></i>
-            </button>
-            <label class="hidden" for="bp">Purple</label>
-            <input type="radio" name="theme" id="purple" checked />
-            <label class="hidden" for="bg">Green</label>
-            <input type="radio" name="theme" id="green" />
-            <label class="hidden" for="gp">Pink</label>
-            <input type="radio" name="theme" id="pink" />
-            <label class="hidden" for="gg">Blue</label>
-            <input type="radio" name="theme" id="blue" />
-          </fieldset>
-        </form>
+    <ul class="nav-items">
+     <li>
+      <a href="./index.html">
+       <i class="fa fa-home"></i>
+       <span class="nav-text">Home</span>
+      </a>
+     </li>
+     <li>
+      <div class="dropdown">
+       <button class="dropbtn"><i class="fa fa-book"></i> Chapters</button>
+       <div class="dropdown-content">
+        <a href="./truthTable.html">Truth-Table</a>
+        <a href="./adders.html">Adders</a>
+        <a href="./counters.html">Counters</a>
+       </div>
       </div>
-      <div class="footer-content">
-        <p>Copyright &copy; 2023</p>
+     </li>
+     <li>
+      <a href="./about.html">
+       <i class="fa fa-circle-info"></i>
+       <span class="nav-text"> About </span>
+      </a>
+     </li>
+     <li>
+      <a href="./help.html">
+       <i class="fa fa-circle-question"></i>
+       <span class="nav-text"> Help </span>
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div class="tools_sidebar">
+    <div class="tools_header">
+     <i class="fa fa-list"></i>
+     <select class="tools_sidebar_content" name="tools-option" id="tool-option">
+      <option value="default">Select Tool</option>
+      <option value="logic">Logic Gates</option>
+      <option value="converter">Binary Converter</option>
+      <option value="calculator">Binary Calculator</option>
+     </select>
+    </div>
+    <div class="tools_content">
+     <div class="tools_item tools_conv">
+      <h1>Binary Converter</h1>
+      <form class="tools_conv_form">
+       <div class="conv_input_group">
+        <input type="text" name="binary" id="conv_from" />
+        <select name="options" id="conv_options_from">
+         <option value="bin">Binary</option>
+         <option value="dec">Decimal</option>
+         <option value="hex">Hex</option>
+        </select>
+       </div>
+
+       <div class="conv_input_group">
+        <input type="text" name="decimal" id="conv_to" />
+        <select name="options" id="conv_options_to">
+         <option value="bin">Binary</option>
+         <option value="dec">Decimal</option>
+         <option value="hex">Hex</option>
+        </select>
+       </div>
+
+       <button class="form_button" type="submit" id="convert"> Convert </button>
+      </form>
+     </div>
+    </div>
+   </div>
+  </header>
+  <container class="bod">
+   <section class="login_sec">
+    <div class="login_cont">
+     <h1>Login</h1>
+     <p id="login_status"></p>
+     <form class="login_form">
+      <div class="login_input">
+       <label for="username">Username</label>
+       <input
+        type="text"
+        name="username"
+        id="login_user"
+        placeholder="Enter your username"
+        required
+       />
       </div>
-    </footer>
+      <div class="login_input">
+       <label for="password">Password</label>
+       <input
+        type="password"
+        name="password"
+        id="login_pass"
+        placeholder="Enter your password"
+        required
+       />
+      </div>
 
-    <script type="module" src="./assets/js/login.js"></script>
-    <script src="../main.js"></script>
+      <button type="submit" class="login_btn">Login</button>
+     </form>
 
-    <!-- Cloudflare Web Analytics -->
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "cb2c44b3b0f1449b9a62490daa7124e6"}'
-    ></script>
-    <!-- End Cloudflare Web Analytics -->
-    <script
-      src="https://kit.fontawesome.com/cda065bf16.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+     <p>Don't have an account? <a href="./register.html">Register</a></p>
+    </div>
+   </section>
+  </container>
+
+  <footer class="footer">
+   <div class="themePicker">
+    <form class="themeForm">
+     <fieldset>
+      <legend class="hidden">Pick theme:</legend>
+      <button id="themeButton">
+       <i class="fa fa-palette theme-icon"></i>
+      </button>
+      <label class="hidden" for="bp">Purple</label>
+      <input type="radio" name="theme" id="purple" checked />
+      <label class="hidden" for="bg">Green</label>
+      <input type="radio" name="theme" id="green" />
+      <label class="hidden" for="gp">Pink</label>
+      <input type="radio" name="theme" id="pink" />
+      <label class="hidden" for="gg">Blue</label>
+      <input type="radio" name="theme" id="blue" />
+     </fieldset>
+    </form>
+   </div>
+   <div class="footer-content">
+    <p>Copyright &copy; 2023</p>
+   </div>
+  </footer>
+
+  <script type="module" src="./assets/js/login.js"></script>
+  <script src="../main.js"></script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script
+   defer
+   src="https://static.cloudflareinsights.com/beacon.min.js"
+   data-cf-beacon='{"token": "cb2c44b3b0f1449b9a62490daa7124e6"}'
+  ></script>
+  <!-- End Cloudflare Web Analytics -->
+  <script
+   src="https://kit.fontawesome.com/cda065bf16.js"
+   crossorigin="anonymous"
+  ></script>
+ </body>
 </html>

@@ -1,203 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href=".\assets\css\style.css" />
-    <link rel="stylesheet" href=".\assets\css\navbar.css" />
-    <link rel="stylesheet" href=".\assets\css\tTable.css" />
-    <link rel="stylesheet" href="./assets/css/tools.css" />
-    <link rel="stylesheet" href="../main.css" />
-    <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon" />
-    <title>DigitaliSim | Truth-table Generator</title>
-  </head>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href=".\assets\css\style.css" />
+  <link rel="stylesheet" href=".\assets\css\navbar.css" />
+  <link rel="stylesheet" href=".\assets\css\tTable.css" />
+  <link rel="stylesheet" href="./assets/css/tools.css" />
+  <link rel="stylesheet" href="../main.css" />
+  <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon" />
+  <title>DigitaliSim | Truth-table Generator</title>
+ </head>
 
-  <body>
-    <header>
-      <nav class="main-menu">
-        <ul class="nav-logo">
-          <li>
-            <a href="./index.html">
-              <img src="./assets/img/iot.png" alt="DigitaliSim Logo" />
-              <span class="nav-text">DigitaliSim</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="nav-items">
-          <li>
-            <a href="./index.html">
-              <i class="fa fa-home"></i>
-              <span class="nav-text">Home</span>
-            </a>
-          </li>
-          <li class="dropdown_nav">
-            <i class="fa fa-book"></i>
-            <select name="chapters" id="chapters">
-              <option value="default">
-                <span class="nav-text"> Chapters </span>
-              </option>
-              <option value="logic">
-                <span class="nav-text"> Logic Gates </span>
-              </option>
-              <option value="boolean">
-                <span class="nav-text">Truth Table</span>
-              </option>
-              <option value="adders">
-                <span class="nav-text"> Adders </span>
-              </option>
-              <option value="decoders">
-                <span class="nav-text"> Encoders </span>
-              </option>
-              <option value="multiplexers">
-                <span class="nav-text"> Multiplexers </span>
-              </option>
-              <option value="latches">
-                <span class="nav-text"> Flip-Flops </span>
-              </option>
-              <option value="counters">
-                <span class="nav-text"> Counters </span>
-              </option>
-            </select>
-          </li>
-          <li>
-            <a href="./about.html">
-              <i class="fa fa-circle-info"></i>
-              <span class="nav-text"> About </span>
-            </a>
-          </li>
-          <li>
-            <a href="./help.html">
-              <i class="fa fa-circle-question"></i>
-              <span class="nav-text"> Help </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="tools_sidebar">
-        <div class="tools_header">
-          <i class="fa fa-list"></i>
-          <select
-            class="tools_sidebar_content"
-            name="tools-option"
-            id="tool-option"
-          >
-            <option value="default">Select Tool</option>
-            <option value="logic">Logic Gates</option>
-            <option value="converter">Binary Converter</option>
-            <option value="calculator">Binary Calculator</option>
-          </select>
-        </div>
-        <div class="tools_content">
-          <div class="tools_item tools_conv">
-            <h1>Binary Converter</h1>
-            <form class="tools_conv_form">
-              <div class="conv_input_group">
-                <input type="text" name="binary" id="conv_from" />
-                <select name="options" id="conv_options_from">
-                  <option value="bin">Binary</option>
-                  <option value="dec">Decimal</option>
-                  <option value="hex">Hex</option>
-                </select>
-              </div>
+ <body>
+  <header>
+   <nav class="main-menu">
+    <ul class="nav-logo">
+     <li>
+      <a href="./index.html">
+       <img
+        class="nav-logo-img"
+        src="./assets/img/iot.png"
+        alt="DigitaliSim Logo"
+       />
+       <span class="nav-text nav-logo-text">DigitaliSim</span>
+      </a>
+     </li>
+    </ul>
 
-              <div class="conv_input_group">
-                <input type="text" name="decimal" id="conv_to" />
-                <select name="options" id="conv_options_to">
-                  <option value="bin">Binary</option>
-                  <option value="dec">Decimal</option>
-                  <option value="hex">Hex</option>
-                </select>
-              </div>
-
-              <button class="form_button" type="submit" id="convert">
-                Convert
-              </button>
-            </form>
-          </div>
-        </div>
+    <ul class="nav-items">
+     <li>
+      <a href="./index.html">
+       <i class="fa fa-home"></i>
+       <span class="nav-text">Home</span>
+      </a>
+     </li>
+     <li>
+      <div class="dropdown">
+       <button class="dropbtn"><i class="fa fa-book"></i> Chapters</button>
+       <div class="dropdown-content">
+        <a href="./truthTable.html">Truth-Table</a>
+        <a href="./adders.html">Adders</a>
+        <a href="./counters.html">Counters</a>
+        <a href="./flipflops.html">FlipFlops</a>
+        <a href="./decoders.html">Decoders</a>
+       </div>
       </div>
-    </header>
-    <container class="bod">
-      <container class="dis_container">
-        <h1 class="title_h">Instructions for Truth Table</h1>
-        <p>1. 1st choose the correct combinational logic above</p>
-        <p>
-          2. columns are from A-D and rows are 1-8, for example if you want to
-          chooose a certain output, say the 1st logic gate is B1
-        </p>
-        <p>
-          3. 1st Choose the inputs and logic gate on row 1, it you require extra
-          Gates , you may utilise other rows,
-        </p>
+     </li>
+     <li>
+      <a href="./about.html">
+       <i class="fa fa-circle-info"></i>
+       <span class="nav-text"> About </span>
+      </a>
+     </li>
+     <li>
+      <a href="./help.html">
+       <i class="fa fa-circle-question"></i>
+       <span class="nav-text"> Help </span>
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div class="tools_sidebar">
+    <div class="tools_header">
+     <i class="fa fa-list"></i>
+     <select class="tools_sidebar_content" name="tools-option" id="tool-option">
+      <option value="default">Select Tool</option>
+      <option value="logic">Logic Gates</option>
+      <option value="converter">Binary Converter</option>
+      <option value="calculator">Binary Calculator</option>
+     </select>
+    </div>
+    <div class="tools_content">
+     <div class="tools_item tools_conv">
+      <h1>Binary Converter</h1>
+      <form class="tools_conv_form">
+       <div class="conv_input_group">
+        <input type="text" name="binary" id="conv_from" />
+        <select name="options" id="conv_options_from">
+         <option value="bin">Binary</option>
+         <option value="dec">Decimal</option>
+         <option value="hex">Hex</option>
+        </select>
+       </div>
 
-        <p></p>
-        <p>
-          4. Select the number of Input your combinational Logic Circuit has,
-          (A,B,C,D). FOR NOW THE ALGORITHM CAN ONLY TAKE 4 INPUTS
-        </p>
-        <p>5. Then click generate!</p>
-        <p>
-          6. If a column title is red, that means you have not selected the
-          input variable
-        </p>
-        <p>8. ignore empty cells in the Truth-table</p>
-        <p>9. R3o represents the output of row 3, same thing as for others</p>
-        <p>10. if you want auto generated inputs, click "auto generate"</p>
-        <p>Note: all input fields will be cleared</p>
-        <p>
-          11. if a certain variable is no filled in, it will be auto generated.
-        </p>
-        <p>
-          12. !! A is the master input, if you are not auto generating, then it
-          must be filled in.
-        </p>
+       <div class="conv_input_group">
+        <input type="text" name="decimal" id="conv_to" />
+        <select name="options" id="conv_options_to">
+         <option value="bin">Binary</option>
+         <option value="dec">Decimal</option>
+         <option value="hex">Hex</option>
+        </select>
+       </div>
 
-        <h3>Suggestions window will be avaiable soon</h3>
-      </container>
-    </container>
+       <button class="form_button" type="submit" id="convert"> Convert </button>
+      </form>
+     </div>
+    </div>
+   </div>
+  </header>
 
-    <footer class="footer">
-      <div class="themePicker">
-        <form class="themeForm">
-          <fieldset>
-            <legend class="hidden">Pick theme:</legend>
-            <button id="themeButton">
-              <i class="fa fa-palette theme-icon"></i>
-            </button>
-            <label class="hidden" for="bp">Purple</label>
-            <input type="radio" name="theme" id="purple" checked />
-            <label class="hidden" for="bg">Green</label>
-            <input type="radio" name="theme" id="green" />
-            <label class="hidden" for="gp">Pink</label>
-            <input type="radio" name="theme" id="pink" />
-            <label class="hidden" for="gg">Blue</label>
-            <input type="radio" name="theme" id="blue" />
-          </fieldset>
-        </form>
-      </div>
-      <div class="footer-content">
-        <p>Copyright &copy; 2023</p>
-      </div>
-    </footer>
+  <container class="bod">
+   <container class="dis_container">
+    <h1 class="title_h">Instructions for Truth Table</h1>
+    <p>1. 1st choose the correct combinational logic above</p>
+    <p>
+     2. columns are from A-D and rows are 1-8, for example if you want to
+     chooose a certain output, say the 1st logic gate is B1
+    </p>
+    <p>
+     3. 1st Choose the inputs and logic gate on row 1, it you require extra
+     Gates , you may utilise other rows,
+    </p>
 
-    <script type="module" src=".\assets\js\gates.js"></script>
-    <script type="module" src=".\assets\js\tTable.js"></script>
-    <script type="module" src="./assets/js/canvas.js"></script>
+    <p></p>
+    <p>
+     4. Select the number of Input your combinational Logic Circuit has,
+     (A,B,C,D). FOR NOW THE ALGORITHM CAN ONLY TAKE 4 INPUTS
+    </p>
+    <p>5. Then click generate!</p>
+    <p>
+     6. If a column title is red, that means you have not selected the input
+     variable
+    </p>
+    <p>8. ignore empty cells in the Truth-table</p>
+    <p>9. R3o represents the output of row 3, same thing as for others</p>
+    <p>10. if you want auto generated inputs, click "auto generate"</p>
+    <p>Note: all input fields will be cleared</p>
+    <p>
+     11. if a certain variable is no filled in, it will be auto generated.
+    </p>
+    <p>
+     12. !! A is the master input, if you are not auto generating, then it must
+     be filled in.
+    </p>
 
-    <!-- to be included on every page -->
-    <script src="./assets/js/tools.js"></script>
-    <script src="../main.js"></script>
+    <h3>Suggestions window will be avaiable soon</h3>
+   </container>
+  </container>
 
-    <!-- Cloudflare Web Analytics -->
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "cb2c44b3b0f1449b9a62490daa7124e6"}'
-    ></script>
-    <!-- End Cloudflare Web Analytics -->
-    <script
-      src="https://kit.fontawesome.com/cda065bf16.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <footer class="footer">
+   <div class="themePicker">
+    <form class="themeForm">
+     <fieldset>
+      <legend class="hidden">Pick theme:</legend>
+      <button id="themeButton">
+       <i class="fa fa-palette theme-icon"></i>
+      </button>
+      <label class="hidden" for="bp">Purple</label>
+      <input type="radio" name="theme" id="purple" checked />
+      <label class="hidden" for="bg">Green</label>
+      <input type="radio" name="theme" id="green" />
+      <label class="hidden" for="gp">Pink</label>
+      <input type="radio" name="theme" id="pink" />
+      <label class="hidden" for="gg">Blue</label>
+      <input type="radio" name="theme" id="blue" />
+     </fieldset>
+    </form>
+   </div>
+   <div class="footer-content">
+    <p>Copyright &copy; 2023</p>
+   </div>
+  </footer>
+
+  <script type="module" src=".\assets\js\gates.js"></script>
+  <script type="module" src=".\assets\js\tTable.js"></script>
+  <script type="module" src="./assets/js/canvas.js"></script>
+
+  <!-- to be included on every page -->
+  <script src="./assets/js/tools.js"></script>
+  <script src="../main.js"></script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script
+   defer
+   src="https://static.cloudflareinsights.com/beacon.min.js"
+   data-cf-beacon='{"token": "cb2c44b3b0f1449b9a62490daa7124e6"}'
+  ></script>
+  <!-- End Cloudflare Web Analytics -->
+  <script
+   src="https://kit.fontawesome.com/cda065bf16.js"
+   crossorigin="anonymous"
+  ></script>
+ </body>
 </html>
