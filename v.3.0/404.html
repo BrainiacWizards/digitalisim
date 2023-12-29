@@ -3,13 +3,12 @@
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href=".\assets\css\style.css" />
-  <link rel="stylesheet" href=".\assets\css\navbar.css" />
-  <link rel="stylesheet" href=".\assets\css\tTable.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/navbar.css" />
   <link rel="stylesheet" href="./assets/css/tools.css" />
   <link rel="stylesheet" href="../main.css" />
   <link rel="shortcut icon" href="./assets/img/iot.png" type="image/x-icon" />
-  <title>DigitaliSim | Login/Register</title>
+  <title>DigitaliSim | Latches/FlipFlops</title>
  </head>
 
  <body>
@@ -39,9 +38,11 @@
       <div class="dropdown">
        <button class="dropbtn"><i class="fa fa-book"></i> Chapters</button>
        <div class="dropdown-content">
-        <a href="./truthTable.html">Truth-Table</a>
+        <a href="./truthTable.html">Truth-Table <i class="far fa-star"></i></a>
         <a href="./adders.html">Adders</a>
         <a href="./counters.html">Counters</a>
+        <a href="./flipflops.html">FlipFlops</a>
+        <a href="./decoders.html">Decoders</a>
        </div>
       </div>
      </li>
@@ -59,77 +60,10 @@
      </li>
     </ul>
    </nav>
-   <div class="tools_sidebar">
-    <div class="tools_header">
-     <i class="fa fa-list"></i>
-     <select class="tools_sidebar_content" name="tools-option" id="tool-option">
-      <option value="default">Select Tool</option>
-      <option value="logic">Logic Gates</option>
-      <option value="converter">Binary Converter</option>
-      <option value="calculator">Binary Calculator</option>
-     </select>
-    </div>
-    <div class="tools_content">
-     <div class="tools_item tools_conv">
-      <h1>Binary Converter</h1>
-      <form class="tools_conv_form">
-       <div class="conv_input_group">
-        <input type="text" name="binary" id="conv_from" />
-        <select name="options" id="conv_options_from">
-         <option value="bin">Binary</option>
-         <option value="dec">Decimal</option>
-         <option value="hex">Hex</option>
-        </select>
-       </div>
-
-       <div class="conv_input_group">
-        <input type="text" name="decimal" id="conv_to" />
-        <select name="options" id="conv_options_to">
-         <option value="bin">Binary</option>
-         <option value="dec">Decimal</option>
-         <option value="hex">Hex</option>
-        </select>
-       </div>
-
-       <button class="form_button" type="submit" id="convert"> Convert </button>
-      </form>
-     </div>
-    </div>
-   </div>
   </header>
-  <container class="bod">
-   <section class="login_sec">
-    <div class="login_cont">
-     <h1>Login</h1>
-     <p id="login_status"></p>
-     <form class="login_form">
-      <div class="login_input">
-       <label for="username">Username</label>
-       <input
-        type="text"
-        name="username"
-        id="login_user"
-        placeholder="Enter your username"
-        required
-       />
-      </div>
-      <div class="login_input">
-       <label for="password">Password</label>
-       <input
-        type="password"
-        name="password"
-        id="login_pass"
-        placeholder="Enter your password"
-        required
-       />
-      </div>
 
-      <button type="submit" class="login_btn">Login</button>
-     </form>
-
-     <p>Don't have an account? <a href="./register.html">Register</a></p>
-    </div>
-   </section>
+  <container class="bhody">
+   <h1 style="color: red">404! Page not Found</h1>
   </container>
 
   <footer class="footer">
@@ -155,8 +89,6 @@
     <p>Copyright &copy; 2023</p>
    </div>
   </footer>
-
-  <script type="module" src="./assets/js/login.js"></script>
 
   <!-- to be included on every page -->
   <script defer src="../main.js"></script>
