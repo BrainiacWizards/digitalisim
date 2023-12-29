@@ -1,16 +1,55 @@
+# DigitaliSim
+
 ## Description
-Just a Simple simulation of some of the circuits in Digital Systems 2
-The current version [v.3.0] is the latest version i have developed; it has only flipflops, a combinational logic circuit and truthable generator
-The aim is to create two versions, a test-safe version [with auto generated input or just demonstrations] and a version that can actually do the math/logic on behalf of the user. with input fields.
+
+Digitalisim is a simple simulation of some circuits in Digital Systems. The current version (v.3.0) includes flip-flops, a combinational logic circuit, and a truth table generator. The aim is to create two versions: a test-safe version with auto-generated input or demonstrations, and a version that can perform math/logic operations based on user input, but friednly to be used in open book tests.
 
 ## Contribution
-Download Git on your PC, clone the repo, and push your changes when logging off.
-Visit the project tab to log progress and tasks on the project.
-All changes will be committed to the main branch.
+
+To contribute to this project, follow these steps:
+
+1. Download Git on your PC.
+2. Clone the repository.
+3. Make your changes.
+4. open a Pull Request.
+5. Code Owners will review your request and merge it if it is approved.
+
+All changes should be committed to the on seperate branch.
+
+## Installation
+
+project requires no installations, just open the url at the bottom in your browser.
+
+## Issue logging
+
+> Log any error on github issues using this [url](https://github.com/CPUT-DEVS/digitalisim/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=)
+
+> Log any feature request/upgrades using this [url](https://github.com/CPUT-DEVS/digitalisim/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=)
 
 ## NB
-The Site is only optimized for desktop, not yet for mobile.
-For testing, a Github page has been set up.
-I would advise you to register for the GitHub Student Pack to have access to GitHub Copilot.
 
-url: https://digitalisim.pages.dev/
+- The site is currently optimized for desktop only and is not yet optimized for mobile devices.
+- For testing purposes, a GitHub page has been set up. The page is updated automatically when changes are pushed to the main branch. The page can be accessed at the following
+
+> URL: [https://digitalisim.pages.dev/](https://digitalisim.pages.dev/)
+
+## License
+
+This project uses the MIT license. See the LICENSE file for more details.
+
+## Credits
+
+- Name: [Manelisi Mpotulo](@mmpotulo28)
+- Email: [mpotulom28@gmail.com](mpotulom28@gmail.com)
+- GitHub: [mmpotulo28](https//github.com/mmpotulo28)
+- Instagram: [@dj_mnesh](https://www.instagram.com/dj_mnesh/)
+- Portfolio: [Click Here](https://manelisim.pages.com)
+- LinkedIn: [Profile]()
+
+> Feel free to contact me for any questions or contributions.
+
+- Name: [Palesa Motaung](@Helipterum)
+- Email: `comming soon`
+- GitHub: [Helipterum](https//github.com/Helipterum)
+- Instagram: `comming soon`
+- Portfolio: `comming soon`
