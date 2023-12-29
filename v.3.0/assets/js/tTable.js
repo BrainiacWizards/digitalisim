@@ -1366,28 +1366,19 @@ export function resetTable () {
     htmlContent = '';
     tbody.innerHTML = `
     <tr class="title_row">
-          <td class="tt_data colA">
-            <p>A</p>
-          </td>
-          <td class="tt_data colB">
-            <p>B</p>
-          </td>
-          <td class="tt_data colC">
-            <p>C</p>
-          </td>
-          <td class="tt_data colD">
-            <p>D</p>
-          </td>
-          <td  class="tt_data colE">
-            <p>output</p>
-          </td>
-        </tr>`;
+        <td class="tt_data colA"><p>A</p></td>
+        <td class="tt_data colB"><p>B</p></td>
+        <td class="tt_data colC"><p>C</p></td>
+        <td class="tt_data colD"><p>D</p></td>
+        <td  class="tt_data colE"><p>output</p></td>
+    </tr>`;
 
     //reset boalean expression variables
     SOP_StringArray = [];
     SOP_BinArray = [];
-    POS_StringArray = [];
     POS_BinArray = [];
+    POS_StringArray = [];
+
 }
 
 /***********************Generate Truth-Table***********************/
@@ -1734,22 +1725,11 @@ function domOperation () {
     for ( let i = 0; i < genOut.length; i++ ) {
         htmlContent += `
         <tr class="tt_row" id="row${ i + 1 }">
-          <td class="tt_data colA">
-            ${ genInA[ i ] }
-          </td>
-          <td class="tt_data colB">
-          ${ genInB[ i ] }
-          </td>
-          <td class="tt_data colC">
-          ${ genInC[ i ] }
-          </td>
-          <td class="tt_data colD">
-          ${ genInD[ i ] }
-          </td>
-          <td class="tt_data colE">
-          ${ genOut[ i ] }
-          </td>
-        </tr>
-        `;
+          <td class="tt_data colA">${ genInA[ i ] }</td>
+          <td class="tt_data colB">${ genInB[ i ] }</td>
+          <td class="tt_data colC">${ genInC[ i ] }</td>
+          <td class="tt_data colD">${ genInD[ i ] }</td>
+          <td class="tt_data colE">${ genOut[ i ] }</td>
+        </tr>`;
     }
-}
+};

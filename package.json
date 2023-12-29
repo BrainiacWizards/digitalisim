@@ -1,0 +1,15 @@
+{
+  "name": "digitalism",
+  "version": "3.0.1",
+  "description": "Digitalism Web App",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/CPUT-DEVS/digitalism"
+  },
+  "author": {
+    "name": "Manelisi",
+    "email": "mpotulom28@gmail.com"
+  }
+}

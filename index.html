@@ -5,13 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="refresh" content="0; url=./v.3.0/" />
   <link rel="stylesheet" href="./main.css" />
+  <link rel="stylesheet" href="./v.3.0/assets/css/style.css" />
+  <link rel="stylesheet" href="./v.3.0/assets/css/navbar.css" />
   <title>DigitaliSim | Version Redirect</title>
  </head>
 
  <body>
   <header>
-   <div class="topbot">
-    <h1>DigitaliSim | Lets visualize it</h1>
+   <nav class="main-menu">
+    <ul class="nav-logo">
+     <li>
+      <a href="./index.html">
+       <img
+        class="nav-logo-img"
+        src="./assets/img/iot.png"
+        alt="DigitaliSim Logo"
+       />
+       <span class="nav-text nav-logo-text">DigitaliSim</span>
+      </a>
+     </li>
+    </ul>
+
+    <ul class="nav-items">
+     <li>
+      <a href="./index.html">
+       <i class="fa fa-home"></i>
+       <span class="nav-text">Home</span>
+      </a>
+     </li>
+     <li>
+      <div class="dropdown">
+       <button class="dropbtn"><i class="fa fa-book"></i> Chapters</button>
+       <div class="dropdown-content">
+        <a href="./truthTable.html">Truth-Table</a>
+        <a href="./adders.html">Adders</a>
+        <a href="./counters.html">Counters</a>
+       </div>
+      </div>
+     </li>
+     <li>
+      <a href="./about.html">
+       <i class="fa fa-circle-info"></i>
+       <span class="nav-text"> About </span>
+      </a>
+     </li>
+     <li>
+      <a href="./help.html">
+       <i class="fa fa-circle-question"></i>
+       <span class="nav-text"> Help </span>
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div class="tools_sidebar">
+    <div class="tools_header">
+     <i class="fa fa-list"></i>
+     <select class="tools_sidebar_content" name="tools-option" id="tool-option">
+      <option value="default">Select Tool</option>
+      <option value="logic">Logic Gates</option>
+      <option value="converter">Binary Converter</option>
+      <option value="calculator">Binary Calculator</option>
+     </select>
+    </div>
+    <div class="tools_content">
+     <div class="tools_item tools_conv">
+      <h1>Binary Converter</h1>
+      <form class="tools_conv_form">
+       <div class="conv_input_group">
+        <input type="text" name="binary" id="conv_from" />
+        <select name="options" id="conv_options_from">
+         <option value="bin">Binary</option>
+         <option value="dec">Decimal</option>
+         <option value="hex">Hex</option>
+        </select>
+       </div>
+
+       <div class="conv_input_group">
+        <input type="text" name="decimal" id="conv_to" />
+        <select name="options" id="conv_options_to">
+         <option value="bin">Binary</option>
+         <option value="dec">Decimal</option>
+         <option value="hex">Hex</option>
+        </select>
+       </div>
+
+       <button class="form_button" type="submit" id="convert"> Convert </button>
+      </form>
+     </div>
+    </div>
    </div>
   </header>
 
@@ -19,7 +100,7 @@
    <img src="./v.3.0/assets/img/iot.png" alt="DigitaliSim Logo" />
    <h3>Redirecting to the latest version, please wait...</h3>
    <p>If the redirect doesn't work, click the button below.</p>
-   <a href="./v.3.0/"><button>redirect</button></a>
+   <a href="./v.3.0/"><button>Redirect</button></a>
    <br />
    <p
     >Don't worry it's a safe redirect, our site is protected by Cloudflare and

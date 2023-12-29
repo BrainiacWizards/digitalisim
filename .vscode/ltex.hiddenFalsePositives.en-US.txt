@@ -1,0 +1,1 @@
+{"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\Qnull A A' B B' C C' D D' null A A' B B' C C' D D' null AND OR NOR NAND XOR null A A' B B' C C' D D' R1o R1o' null A A' B B' C C' D D' R1o R1o' null AND OR NOR NAND XOR X\\E$"}

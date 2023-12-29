@@ -1,120 +1,120 @@
 /****tools Sidebar****/
 .tools_sidebar {
-    display: block;
-    position: fixed;
-    top: 10%;
-    left: 0;
-    width: 55px;
-    height: 55px;
-    background-color: var(--theme-black);
-    border-radius: 0 20px 20px 0px;
-    overflow: hidden;
-    transition: all 0.5s ease-out;
-    z-index: 1000;
+ display: block;
+ position: fixed;
+ top: 10%;
+ left: 0;
+ width: 55px;
+ height: 55px;
+ background-color: var(--theme-black);
+ border-radius: 0 20px 20px 0px;
+ overflow: hidden;
+ transition: all 0.5s ease-out;
+ z-index: 1000;
 }
 
-.tools_sidebar:hover {
-    width: 400px;
-    height: 70%;
-    transition: all 0.5s ease-in;
-    border-right: 5px solid var(--theme-color);
+.tools_sidebar:hover,
+.tools_sidebar:focus-within,
+.tools_sidebar:focus {
+ width: 400px;
+ height: 70%;
+ transition: all 0.5s ease-in;
+ border-right: 5px solid var(--theme-color);
 }
 
 .tools_header {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-    text-wrap: nowrap;
-    background-color: var(--theme-black);
-    border-bottom: 5px solid var(--theme-color);
-    border-radius: 0 0 20px 0px;
+ display: flex;
+ flex-wrap: nowrap;
+ justify-content: space-between;
+ align-items: center;
+ height: 50px;
+ width: 100%;
+ text-wrap: nowrap;
+ background-color: var(--theme-black);
+ border-bottom: 5px solid var(--theme-color);
+ border-radius: 0 0 20px 0px;
 }
 
 .tools_header i {
-    display: inline-block;
-    font-size: 25px;
-    line-height: 50px;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    margin: 15px;
-    color: lightgrey;
-    ;
+ display: inline-block;
+ font-size: 25px;
+ line-height: 50px;
+ text-align: center;
+ width: 50px;
+ height: 50px;
+ margin: 15px;
+ color: lightgrey;
 }
 
 .tools_header select {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 auto;
-    background-color: grey;
-    font-size: 19px;
-    font-weight: bold;
-    padding: 5px 10px;
+ display: inline-block;
+ vertical-align: middle;
+ margin: 0 auto;
+ background-color: grey;
+ font-size: 19px;
+ font-weight: bold;
+ padding: 5px 10px;
 }
 
 .tools_header select:focus {
-    outline: none;
-    border: none;
+ outline: none;
+ border: none;
 }
 
-
 .tools_content {
-    display: block;
-    width: 90%;
-    margin: 20px auto;
-    border-radius: 20px;
-    text-align: center;
+ display: block;
+ width: 90%;
+ margin: 20px auto;
+ border-radius: 20px;
+ text-align: center;
 }
 
 .tools_conv {
-    display: none;
+ display: none;
 }
 
 .conv_input_group {
-    display: block;
-    width: 100%;
+ display: block;
+ width: 100%;
 }
 
 .conv_input_group input {
-    display: inline-block;
-    min-width: 100px;
-    width: 150px;
-    max-width: 200px;
-    padding: 5px 10px;
-    font-size: 18px;
-    border: 1px solid var(--theme-color);
-    border-radius: 20px 0 0 20px;
-    margin: 5px 0;
+ display: inline-block;
+ min-width: 100px;
+ width: 150px;
+ max-width: 200px;
+ padding: 5px 10px;
+ font-size: 18px;
+ border: 1px solid var(--theme-color);
+ border-radius: 20px 0 0 20px;
+ margin: 5px 0;
 }
 
 .conv_input_group select {
-    display: inline-block;
-    width: max-content;
-    padding: 4px 0px;
-    border: 1px solid var(--theme-color);
-    background-color: lightgrey;
-    border-radius: 0px 20px 20px 0px;
+ display: inline-block;
+ width: max-content;
+ padding: 4px 0px;
+ border: 1px solid var(--theme-color);
+ background-color: lightgrey;
+ border-radius: 0px 20px 20px 0px;
 }
 
 .form_button {
-    display: block;
-    width: fit-content;
-    padding: 5px 10px;
-    margin: 10px auto;
-    font-size: 18px;
-    text-align: center;
-    color: inherit;
-    border: none;
-    border-radius: 10px;
-    background-color: var(--theme-color);
-    cursor: pointer;
+ display: block;
+ width: fit-content;
+ padding: 5px 10px;
+ margin: 10px auto;
+ font-size: 18px;
+ text-align: center;
+ color: inherit;
+ border: none;
+ border-radius: 10px;
+ background-color: var(--theme-color);
+ cursor: pointer;
 }
 
 .form_button:hover {
-    background-color: var(--theme-black);
-    font-weight: bold;
-    box-shadow: 0 0 10px var(--theme-color);
+ background-color: var(--theme-black);
+ font-weight: bold;
+ box-shadow: 0 0 10px var(--theme-color);
 }
