@@ -1,0 +1,20 @@
+body {
+ min-width: 100px;
+ overflow: auto;
+ margin-bottom: 100px;
+ height: fit-content;
+}
+
+.tools_sidebar {
+ top: 80px;
+}
+
+@media (max-width: 800px) {
+ nav {
+  padding: 5px 20px;
+ }
+
+ .exp_container {
+  width: 470px !important;
+ }
+}

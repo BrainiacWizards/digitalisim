@@ -1,12 +1,12 @@
 {
-  "name": "Manelisi's Portfolio",
-  "version": "0.0.1",
-  "description": "",
-  "license": "UNLICENSED",
+  "name": "digitalism",
+  "version": "3.0.1",
+  "description": "Digitalism Web App",
+  "license": "MIT",
   "private": false,
   "repository": {
     "type": "github",
-    "url": "https://github.com/mmpotulo28/simple-website"
+    "url": "https://github.com/CPUT-DEVS/digitalism"
   },
   "author": {
     "name": "Manelisi",
