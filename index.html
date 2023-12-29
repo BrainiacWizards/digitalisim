@@ -37,9 +37,11 @@
       <div class="dropdown">
        <button class="dropbtn"><i class="fa fa-book"></i> Chapters</button>
        <div class="dropdown-content">
-        <a href="./truthTable.html">Truth-Table</a>
+        <a href="./truthTable.html">Truth-Table <i class="far fa-star"></i></a>
         <a href="./adders.html">Adders</a>
         <a href="./counters.html">Counters</a>
+        <a href="./flipflops.html">FlipFlops</a>
+        <a href="./decoders.html">Decoders</a>
        </div>
       </div>
      </li>
@@ -57,45 +59,7 @@
      </li>
     </ul>
    </nav>
-   <div class="tools_sidebar">
-    <div class="tools_header">
-     <i class="fa fa-list"></i>
-     <select class="tools_sidebar_content" name="tools-option" id="tool-option">
-      <option value="default">Select Tool</option>
-      <option value="logic">Logic Gates</option>
-      <option value="converter">Binary Converter</option>
-      <option value="calculator">Binary Calculator</option>
-     </select>
-    </div>
-    <div class="tools_content">
-     <div class="tools_item tools_conv">
-      <h1>Binary Converter</h1>
-      <form class="tools_conv_form">
-       <div class="conv_input_group">
-        <input type="text" name="binary" id="conv_from" />
-        <select name="options" id="conv_options_from">
-         <option value="bin">Binary</option>
-         <option value="dec">Decimal</option>
-         <option value="hex">Hex</option>
-        </select>
-       </div>
-
-       <div class="conv_input_group">
-        <input type="text" name="decimal" id="conv_to" />
-        <select name="options" id="conv_options_to">
-         <option value="bin">Binary</option>
-         <option value="dec">Decimal</option>
-         <option value="hex">Hex</option>
-        </select>
-       </div>
-
-       <button class="form_button" type="submit" id="convert"> Convert </button>
-      </form>
-     </div>
-    </div>
-   </div>
   </header>
-
   <div class="main_body">
    <img src="./v.3.0/assets/img/iot.png" alt="DigitaliSim Logo" />
    <h3>Redirecting to the latest version, please wait...</h3>
@@ -107,5 +71,21 @@
     Mcfee Security Services.</p
    >
   </div>
+
+  <!-- to be included on every page -->
+  <script defer src="../main.js"></script>
+  <script async="false" src="./v.3.0/assets/js/tools.js"></script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script
+   defer
+   src="https://static.cloudflareinsights.com/beacon.min.js"
+   data-cf-beacon='{"token": "cb2c44b3b0f1449b9a62490daa7124e6"}'
+  ></script>
+  <!-- End Cloudflare Web Analytics -->
+  <script
+   src="https://kit.fontawesome.com/cda065bf16.js"
+   crossorigin="anonymous"
+  ></script>
  </body>
 </html>
