@@ -27,7 +27,14 @@ export function drawCanvas(in1, in2, in3, in4, in5) {
     let arr4 = in4
 
     //draw genout array
+<<<<<<< Updated upstream
     draw(arr, 20, 20)
+=======
+    if ( arr != undefined || arr != '' ) {
+        draw( arr, 20, 20, 10 );
+    }
+
+>>>>>>> Stashed changes
 
     //draw for 1st array
     draw(arr1, 20, 100)
@@ -45,7 +52,11 @@ export function drawCanvas(in1, in2, in3, in4, in5) {
     drawBar(arr1, 25, canvas.height + 30)
 }
 
+<<<<<<< Updated upstream
 function draw(arr, x, yPos) {
+=======
+function draw ( arr, x, yPos, count = 0 ) {
+>>>>>>> Stashed changes
 
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] == 1) { //draw highs
@@ -71,7 +82,13 @@ function draw(arr, x, yPos) {
             }
         }
 
+<<<<<<< Updated upstream
         ctx.strokeStyle = "lightgrey"
+=======
+        if ( count == 0 ) { ctx.strokeStyle = "grey"; }
+        // else if ( count == 1 ) { ctx.strokeStyle = "lightgrey"; }
+
+>>>>>>> Stashed changes
         ctx.stroke();
 
         //shift horizontaly
