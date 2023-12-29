@@ -14,7 +14,8 @@
 }
 
 .tools_sidebar:hover,
-.tools_sidebar:focus-within {
+.tools_sidebar:focus-within,
+.tools_sidebar:focus {
  width: 400px;
  height: 70%;
  transition: all 0.5s ease-in;
