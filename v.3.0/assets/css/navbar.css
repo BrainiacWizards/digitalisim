@@ -30,7 +30,6 @@ nav ul {
  margin: 0;
  padding: 0;
  list-style: none;
- background-color: var(--theme-black);
 }
 
 nav ul li {
@@ -64,14 +63,13 @@ nav .nav-logo li a .nav-logo-text {
  aspect-ratio: 1/1;
  margin: 0;
  padding: 0;
- background-color: var(--theme-black);
+ background-color: inherit;
  display: inline-block;
  vertical-align: middle;
 }
 
 nav .nav-items li a {
  display: flex;
- background-color: var(--theme-black);
  max-width: 200px;
  justify-content: center;
  align-items: center;
@@ -80,12 +78,14 @@ nav .nav-items li a {
  font-size: 19px;
  padding: 10px 20px;
  max-height: 50px;
+ transition: ease-out 0.6s;
+ border-radius: 20px;
 }
 
-nav .nav-items li a:hover {
+nav .nav-items li a:hover,
+.dropdown .dropbtn:hover {
  color: var(--theme-black);
  background-color: var(--theme-color);
- border-radius: 20px;
 }
 
 nav .nav-items li a span {
@@ -96,13 +96,12 @@ nav .nav-items li a span {
 
 .dropdown {
  display: inline-block;
- background-color: var(--theme-black);
  margin: 0;
+ border-radius: 20px;
 }
 
 .dropdown .dropbtn {
  display: flex;
- background-color: var(--theme-black);
  max-width: 200px;
  justify-content: center;
  align-items: center;
@@ -113,21 +112,21 @@ nav .nav-items li a span {
  max-height: 50px;
  border: none;
  gap: 7px;
-}
-
-.dropdown .dropbtn:hover {
- color: var(--theme-black);
- background-color: var(--theme-color);
+ background-color: inherit;
+ transition: all ease-out 0.2s;
  border-radius: 20px;
 }
+
 .dropdown-content {
+ appearance: none;
  display: none;
  position: absolute;
- background-color: var(--theme-black);
  min-width: 160px;
- box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
  z-index: 1;
  color: var(--font-color);
+ transition: all ease-in-out 0.3s;
+ background-color: rgba(0, 0, 0, 0);
+ background-clip: content-box;
 }
 
 .dropdown-content a {
@@ -137,6 +136,9 @@ nav .nav-items li a span {
  text-decoration: none;
  display: block;
  text-align: left;
+ background-color: var(--theme-black);
+ border-radius: 0 50% 50% 0 !important;
+ margin: 3px;
 }
 
 .dropdown:hover .dropdown-content {
