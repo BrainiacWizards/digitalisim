@@ -5,6 +5,7 @@ body {
  font-family: Arial, Helvetica, sans-serif;
  color: var(--font-color);
  display: block;
+ animation: backgroundBlend 30s infinite linear;
 }
 
 html {
@@ -180,5 +181,26 @@ header {
     }
     100% {
         transform: rotate3d(0, 0, 1, 405deg);
+    }
+}
+
+@keyframes backgroundBlend {
+    0% {
+        background-color: grey;
+    }
+
+    25% {
+        background-color: var(--theme-black);
+    }
+    50% {
+        background-color: var(--theme-color);
+    }
+
+    75% {
+        background-color: var(--theme-black);
+    }
+
+    100% {
+        background-color: grey;
     }
 }
