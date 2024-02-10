@@ -4,6 +4,11 @@
   "description": "Digitalism Web App",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "main": "index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "github",
     "url": "https://github.com/CPUT-DEVS/digitalism"
@@ -11,5 +16,8 @@
   "author": {
     "name": "Manelisi",
     "email": "mpotulom28@gmail.com"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
