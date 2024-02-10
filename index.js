@@ -14,5 +14,3 @@ const port = 8080; // Specify the port number
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
-
-window.location.href = "./public/";
