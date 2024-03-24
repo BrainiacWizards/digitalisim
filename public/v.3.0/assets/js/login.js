@@ -1,9 +1,12 @@
-import { firebase } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getDatabase } from "firebase/database";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const login_form = document.querySelector( ".login_form" );
+const login_user = document.querySelector( "#login_user" );
+const login_pass = document.querySelector( "#login_pass" );
+const login_status = document.querySelector( "#login_status" );
+
 const firebaseConfig = {
     apiKey: "AIzaSyB1PW1bEv2Ks4FZFWGYJ8btpKelaLpFTDg",
     authDomain: "digitalisim.firebaseapp.com",
@@ -14,19 +17,13 @@ const firebaseConfig = {
     measurementId: "G-TY251NQVE1"
 };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const database = firebase.database();
-const auth = firebase.auth();
-
-//get login form and inputs
-const login_form = document.querySelector( ".login_form" );
-const login_user = document.querySelector( "#login_user" );
-const login_pass = document.querySelector( "#login_pass" );
-const login_status = document.querySelector( "#login_status" );
+const app = initializeApp( firebaseConfig );
+const database = getDatabase( app );
+const auth = getAuth();
 
 login_form.addEventListener( "submit", function ( e ) {
     e.preventDefault();
+    console.log('submit')
     register();
 } );
 
@@ -41,9 +38,9 @@ function register () {
         return;
     }
 
-    createUserWithEmailAndPassword( auth, username, password )
+    createUserWithEmailAndPassword( auth, email, password )
         .then( ( userCredential ) => {
-            // Signed in 
+            // Signed up 
             const user = userCredential.user;
             var ref = database.ref( 'users/' + user.uid );
 
@@ -54,12 +51,14 @@ function register () {
             };
 
             ref.set( userData );
+
+            login_status.innerHTML = "User created";
+            alert( "User created" );
         } )
         .catch( ( error ) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-
-            alert( errorMessage );
+            login_status.innerHTML = errorMessage;
         } );
 }
 
