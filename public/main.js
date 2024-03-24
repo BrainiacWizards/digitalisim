@@ -39,11 +39,13 @@ function loadTheme() {
 }
 
 //prevent default form submission
-themeButton.addEventListener('click', function (e) {
-    e.preventDefault();
-    black *= -1;
-    setBackTheme();
-})
+if ( themeButton ) {
+    themeButton.addEventListener( 'click', function ( e ) {
+        e.preventDefault();
+        black *= -1;
+        setBackTheme();
+    } );
+}
 
 function setBackTheme() {
     if (black == 1) {

@@ -5,7 +5,6 @@ body {
  font-family: Arial, Helvetica, sans-serif;
  color: var(--font-color);
  display: block;
- animation: backgroundBlend 30s infinite linear;
 }
 
 html {
@@ -160,7 +159,7 @@ header {
  margin: 0;
 }
 
-/* hide themelabesl from user, but visible to bots */
+/* hide theme labels from user, but visible to bots */
 .hidden {
  clip: rect(0 0 0 0);
  clip-path: inset(50%);
