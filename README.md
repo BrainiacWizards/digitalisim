@@ -2,7 +2,7 @@
 
 ## Description
 
-Digitalisim is a simple simulation of some circuits in Digital Systems. The current version (v.3.0) includes flip-flops, a combinational logic circuit, and a truth table generator. The aim is to create two versions: a test-safe version with auto-generated input or demonstrations, and a version that can perform math/logic operations based on user input, but friednly to be used in open book tests.
+Digitalisim is a simple simulation of some circuits in Digital Systems. The current version (v.3.0) includes flip-flops, a combinational logic circuit, and a truth table generator. The aim is to create two versions: a test-safe version with auto-generated input or demonstrations, and a version that can perform math/logic operations based on user input, but friendly to be used in open book tests.
 
 ## Contribution
 
@@ -14,7 +14,7 @@ To contribute to this project, follow these steps:
 4. open a Pull Request.
 5. Code Owners will review your request and merge it if it is approved.
 
-All changes should be committed to the on seperate branch.
+All changes should be committed to the on separate branch.
 
 ## Installation
 
@@ -49,7 +49,7 @@ This project uses the MIT license. See the LICENSE file for more details.
 > Feel free to contact me for any questions or contributions.
 
 - Name: [Palesa Motaung](https://github.com/Helipterum)
-- Email: `comming soon`
+- Email: `coming soon`
 - GitHub: [Helipterum](https://github.com/Helipterum)
-- Instagram: `comming soon`
-- Portfolio: `comming soon`
+- Instagram: `coming soon`
+- Portfolio: `coming soon`
