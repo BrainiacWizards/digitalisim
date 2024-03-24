@@ -18,6 +18,8 @@
     "email": "mpotulom28@gmail.com"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "firebase": "^10.9.0",
+    "firebase-tools": "^13.5.2"
   }
 }
