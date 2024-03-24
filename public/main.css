@@ -5,6 +5,7 @@ body {
  font-family: Arial, Helvetica, sans-serif;
  color: var(--font-color);
  display: block;
+ animation: backgroundBlend 30s infinite linear;
 }
 
 html {
@@ -16,6 +17,7 @@ html {
 :root {
  --theme-black: black;
  --font-color: white;
+ --theme-color: rgb(144, 0, 201);
 }
 
 :root:has(#green:checked) {
@@ -46,15 +48,20 @@ html {
  width: 100%;
  overflow: hidden;
  text-align: center;
- background: var(--theme-color, #2e029d);
- height: calc(100vh - 40px);
+ height: calc(100vh - 100px);
 }
 
 .main_body img {
  display: block;
  width: 200px;
- margin: auto;
+ margin: 20px auto;
+ background-color: rgb(139, 182, 247);
+ border-radius: 50%;
+ outline: 2px solid rgb(139, 182, 247);
+ box-shadow: 5px 5px 5px 0 var(--theme-black);
  position: relative;
+ image-rendering: pixelated;
+ transform: rotate3d(0, 0, 1, 45deg);
 }
 
 header {
@@ -64,7 +71,6 @@ header {
 }
 
 .topbot {
- background: linear-gradient(to right, black, purple, blue);
  margin: -20px 0;
  padding: 0;
  display: block;
@@ -75,12 +81,15 @@ header {
 
 .main_body button {
  font-size: 20px;
- background: linear-gradient(to right, black, purple, blue);
+ padding: 10px;
+ margin: 10px;
+ background-color: var(--theme-color);
+ border-radius: 20px;
  color: white;
 }
 
 .main_body button:hover {
- background: linear-gradient(to right, black, red, blue);
+ background: linear-gradient(to right, var(--theme-black), var(--theme-color));
 }
 
 .themePicker {
@@ -160,4 +169,38 @@ header {
  position: absolute;
  white-space: nowrap;
  width: 1px;
+}
+
+#main-body-img{
+    animation: rotateImage 5s infinite linear;
+}
+
+@keyframes rotateImage {
+    0% {
+        transform: rotate3d(0, 0, 1, 45deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 1, 405deg);
+    }
+}
+
+@keyframes backgroundBlend {
+    0% {
+        background-color: grey;
+    }
+
+    25% {
+        background-color: var(--theme-black);
+    }
+    50% {
+        background-color: var(--theme-color);
+    }
+
+    75% {
+        background-color: var(--theme-black);
+    }
+
+    100% {
+        background-color: grey;
+    }
 }
