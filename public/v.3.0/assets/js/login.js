@@ -1,10 +1,4 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { getDatabase } from "firebase/database";
-import { last } from "firebase-tools/lib/utils";
-
+import { firebase } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,11 +15,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp( firebaseConfig );
-const analytics = getAnalytics( app );
+firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
-
-document.onload = check_login();
+const auth = firebase.auth();
 
 //get login form and inputs
 const login_form = document.querySelector( ".login_form" );
@@ -33,91 +25,19 @@ const login_user = document.querySelector( "#login_user" );
 const login_pass = document.querySelector( "#login_pass" );
 const login_status = document.querySelector( "#login_status" );
 
-//global variables
-var log_pass = null, log_user = null;
-
-//check if user is already logged in
-function check_login () {
-    if ( sessionStorage.getItem( 'loggedIn' ) == 'true' ) {
-        //redirect to main page
-        window.location.href = "./index.html";
-    }
-}
-
-//logout function
-
-
-//handle login form submit
-// login_form.onsubmit = ( e ) => {
-//     e.preventDefault();
-
-//     //get user input
-//     log_user = login_user.value.trim();
-//     log_pass = login_pass.value.trim();
-//     //log user input
-//     console.log( log_pass, log_user );
-
-//     //check if user input is matching with admin credentials
-//     if ( log_user === admin_creds.user && log_pass === admin_creds.pass ) {
-//         //redirect to index.html page
-//         //window.location.href = "./index.html"
-
-//         //show login status
-//         login_status.textContent = "Login successful";
-//         login_status.style.color = "green";
-
-//         //store logins on session storage
-//         sessionStorage.setItem( 'loggedIn', 'true' );
-
-//         //clear input fields
-//         login_user.value = "";
-//         login_pass.value = "";
-
-//         // check if redirected from URL parameter
-//         const urlParams = new URLSearchParams( window.location.search );
-//         const redirectUrl = urlParams.get( 'rdf' );
-//         if ( redirectUrl ) {
-//             window.location.href = redirectUrl;
-//         } else {
-//             window.location.href = "./index.html";
-//         }
-//     } else {
-//         //show error message
-//         login_status.textContent = "Invalid credentials";
-//         login_status.style.color = "red";
-
-//         //clear pasword field
-//         login_pass.value = "";
-//     }
-
-//     //delay then clear login status
-//     setTimeout( () => {
-//         login_status.textContent = "";
-//     }, 3000 );
-
-//     //clear global variables for security
-//     log_user = null;
-//     log_pass = null;
-// };
-
-login_form.onsubmit = ( e ) => {
+login_form.addEventListener( "submit", function ( e ) {
     e.preventDefault();
-
-    log_user = login_user.value.trim();
-    log_pass = login_pass.value.trim();
-
-    if ( log_user && log_pass ) {
-        register();
-    }
-}
+    register();
+} );
 
 
 function register () {
-    const username = log_user;
-    const password = log_pass;
+    const username = login_user;
+    const password = login_pass;
     const auth = getAuth();
 
-    if ( !validateEmail() || !validatePassword() ) {
+    if ( !validateEmail( username ) || !validatePassword( password ) ) {
+        login_status.innerHTML = "Invalid email or password";
         return;
     }
 
@@ -143,20 +63,20 @@ function register () {
         } );
 }
 
-function validatePassword () {
-    if ( log_pass.length < 8 ) {
-        alert( "Password must be at least 8 characters long" );
+function validatePassword ( pass ) {
+    if ( pass.length < 8 ) {
+        login_status.innerHTML = "invalid password";
         return false;
     }
 
     return true;
 }
 
-function validateEmail () {
+function validateEmail ( email ) {
     const emailExpression = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if ( !emailExpression.test( log_user ) ) {
-        alert( "Invalid email address" );
+    if ( !emailExpression.test( email ) ) {
+        login_status.innerHTML = "Invalid email";
         return false;
     }
 
