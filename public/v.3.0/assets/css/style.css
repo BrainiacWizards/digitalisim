@@ -410,31 +410,40 @@ canvas {
 }
 
 .login_cont {
- display: block;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
  width: fit-content;
  max-width: 300px;
  margin: auto;
  text-align: center;
  background-color: var(--theme-black);
  border-radius: 10px;
- padding: 20px 30px;
+ padding: 10px 20px;
  box-shadow: var(--theme-color) 5px 5px 10px 0px;
+ overflow: hidden;
 }
 
 .login_cont h1 {
+ display: block;
  color: var(--font-color);
  font-size: 30px;
  font-weight: bold;
- padding-bottom: 10px;
- margin-bottom: 25px;
- width: 100%;
+ padding: 5px 20px;
+ margin: 20px auto;
+ width: fit-content;
  border-radius: 10px;
  box-shadow: 4px 4px 8px -3px grey;
+ justify-content: center;
 }
 
 .login_form {
- display: block;
+ display: flex;
  width: fit-content;
+ flex-direction: column;
+ flex-wrap: nowrap;
+ justify-content: center;
+ width: 100%;
 }
 
 .login_cont .login_input {
@@ -452,6 +461,7 @@ canvas {
 .login_input input {
  display: block;
  width: 100%;
+ max-width: calc(100% - 25px);
  margin-top: 5px;
  padding: 10px;
  border-radius: 5px;
@@ -487,4 +497,18 @@ canvas {
  background-color: var(--theme-black);
  box-shadow: var(--theme-color) 0px 0px 5px 5px;
  transition: ease-out 0.3s;
+}
+
+#register-btn {
+ display: inline-block;
+ margin: auto;
+ padding: 5px;
+ border-radius: 5px;
+ border: none;
+ background-color: transparent;
+ color: var(--theme-color);
+ font-size: 16px;
+ font-weight: bold;
+ transition: ease-in-out 1s;
+ cursor: pointer;
 }

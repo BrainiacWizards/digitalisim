@@ -4,6 +4,7 @@
   "description": "Digitalism Web App",
   "license": "MIT",
   "private": false,
+  "type": "module",
   "scripts": {
     "main": "index.js",
     "start": "node index.js",
